@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "BotRegistroImoveis.Infra.Data/1.0.0": {
+        "dependencies": {
+          "BotRegistroImoveis.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "BotRegistroImoveis.Infra.Data.dll": {}
+        }
+      },
+      "BotRegistroImoveis.Dominio/1.0.0": {
+        "runtime": {
+          "BotRegistroImoveis.Dominio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BotRegistroImoveis.Infra.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BotRegistroImoveis.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

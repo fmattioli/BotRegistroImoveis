@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "xYDD85IlgDJml7Q1SmtlHBYKGhFc0sRwVV3WvKCHEQfWhez1mkTh/Fc5IBXPbwEXpe6+lzus6/kaKPyfQujbag==",
+  "success": true,
+  "projectFilePath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\felipe.santos\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\felipe.santos\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\felipe.santos\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

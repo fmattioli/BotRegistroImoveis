@@ -1,0 +1,15 @@
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\bin\Release\net5.0\BotRegistroImoveis.Infra.Data.deps.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\bin\Release\net5.0\BotRegistroImoveis.Infra.Data.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\bin\Release\net5.0\ref\BotRegistroImoveis.Infra.Data.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\bin\Release\net5.0\BotRegistroImoveis.Infra.Data.pdb
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\bin\Release\net5.0\BotRegistroImoveis.Dominio.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\bin\Release\net5.0\BotRegistroImoveis.Dominio.pdb
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\BotRegistroImoveis.Infra.Data.csproj.AssemblyReference.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\BotRegistroImoveis.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\BotRegistroImoveis.Infra.Data.AssemblyInfoInputs.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\BotRegistroImoveis.Infra.Data.AssemblyInfo.cs
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\BotRegistroImoveis.Infra.Data.csproj.CoreCompileInputs.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\BotRegistroImoveis.Infra.Data.csproj.CopyComplete
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\BotRegistroImoveis.Infra.Data.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\ref\BotRegistroImoveis.Infra.Data.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Infra.Data\obj\Release\net5.0\BotRegistroImoveis.Infra.Data.pdb

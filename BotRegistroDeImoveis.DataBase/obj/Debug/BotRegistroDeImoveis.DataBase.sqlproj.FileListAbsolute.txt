@@ -1,0 +1,9 @@
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\bin\Debug\BotRegistroDeImoveis.DataBase.dacpac
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\bin\Debug\BotRegistroDeImoveis.DataBase.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\bin\Debug\BotRegistroDeImoveis.DataBase.pdb
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\obj\Debug\Model.xml
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\obj\Debug\refactor.xml
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\obj\Debug\postdeploy.sql
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\obj\Debug\predeploy.sql
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\obj\Debug\BotRegistroDeImoveis.DataBase.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroDeImoveis.DataBase\obj\Debug\BotRegistroDeImoveis.DataBase.pdb

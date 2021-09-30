@@ -1,0 +1,12 @@
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\bin\Release\net5.0\BotRegistroImoveis.Dominio.deps.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\bin\Release\net5.0\BotRegistroImoveis.Dominio.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\bin\Release\net5.0\ref\BotRegistroImoveis.Dominio.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\bin\Release\net5.0\BotRegistroImoveis.Dominio.pdb
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Release\net5.0\BotRegistroImoveis.Dominio.csproj.AssemblyReference.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Release\net5.0\BotRegistroImoveis.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Release\net5.0\BotRegistroImoveis.Dominio.AssemblyInfoInputs.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Release\net5.0\BotRegistroImoveis.Dominio.AssemblyInfo.cs
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Release\net5.0\BotRegistroImoveis.Dominio.csproj.CoreCompileInputs.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Release\net5.0\BotRegistroImoveis.Dominio.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Release\net5.0\ref\BotRegistroImoveis.Dominio.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Release\net5.0\BotRegistroImoveis.Dominio.pdb

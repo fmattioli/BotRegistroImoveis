@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Cards\cardConsultarCustas.json" />
+    <Content Remove="Cards\cardConsultarParticipantes.json" />
+    <Content Remove="Cards\cardObterCustas.json" />
+    <Content Remove="Cards\cardObterParticipantes.json" />
+    <Content Remove="Cards\cardResumoCustas.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Cards\cardConsultarParticipantes.json" />
+    <EmbeddedResource Include="Cards\cardConsultarCustas.json" />
+    <EmbeddedResource Include="Cards\cardObterCustas.json" />
+    <EmbeddedResource Include="Cards\cardResumoCustas.json" />
+    <EmbeddedResource Include="Cards\cardObterParticipantes.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards.Templating" Version="1.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.14.0" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.14.0" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.14.0" />
+    <PackageReference Include="Microsoft.Recognizers.Text.DataTypes.TimexExpression" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CognitiveModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BotRegistroImoveis.Infra.IoC\BotRegistroImoveis.Infra.IoC.csproj" />
+  </ItemGroup>
+
+</Project>

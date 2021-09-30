@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotRegistroImoveis.Dominio", "BotRegistroImoveis.Dominio\BotRegistroImoveis.Dominio.csproj", "{FA9C9C11-1948-4501-88A5-328F919F7E29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotRegistroImoveis.Aplicacao", "BotRegistroImoveis.Aplicacao\BotRegistroImoveis.Aplicacao.csproj", "{CB6DF017-668F-48E2-A46B-73AC420D866A}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BotRegistroDeImoveis.DataBase", "BotRegistroDeImoveis.DataBase\BotRegistroDeImoveis.DataBase.sqlproj", "{40D771FC-70C7-4D24-B554-AC15893E84E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotRegistroImoveis.Infra.Data", "BotRegistroImoveis.Infra.Data\BotRegistroImoveis.Infra.Data.csproj", "{AAEA1393-B2EC-45F0-BBB9-80575DDA9966}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BotRegistroImoveis.Bot", "BotRegistroImoveis.Bot\BotRegistroImoveis.Bot.csproj", "{E12F9B73-377F-44BA-8A2C-50EA1AA54101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotRegistroImoveis.Infra.IoC", "BotRegistroImoveis.Infra.IoC\BotRegistroImoveis.Infra.IoC.csproj", "{4767118F-E4DA-4865-B468-7DD606A39C70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA9C9C11-1948-4501-88A5-328F919F7E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9C9C11-1948-4501-88A5-328F919F7E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9C9C11-1948-4501-88A5-328F919F7E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9C9C11-1948-4501-88A5-328F919F7E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB6DF017-668F-48E2-A46B-73AC420D866A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB6DF017-668F-48E2-A46B-73AC420D866A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB6DF017-668F-48E2-A46B-73AC420D866A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB6DF017-668F-48E2-A46B-73AC420D866A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D771FC-70C7-4D24-B554-AC15893E84E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D771FC-70C7-4D24-B554-AC15893E84E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D771FC-70C7-4D24-B554-AC15893E84E6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{40D771FC-70C7-4D24-B554-AC15893E84E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D771FC-70C7-4D24-B554-AC15893E84E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D771FC-70C7-4D24-B554-AC15893E84E6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AAEA1393-B2EC-45F0-BBB9-80575DDA9966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAEA1393-B2EC-45F0-BBB9-80575DDA9966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAEA1393-B2EC-45F0-BBB9-80575DDA9966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAEA1393-B2EC-45F0-BBB9-80575DDA9966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E12F9B73-377F-44BA-8A2C-50EA1AA54101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E12F9B73-377F-44BA-8A2C-50EA1AA54101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E12F9B73-377F-44BA-8A2C-50EA1AA54101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E12F9B73-377F-44BA-8A2C-50EA1AA54101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4767118F-E4DA-4865-B468-7DD606A39C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4767118F-E4DA-4865-B468-7DD606A39C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4767118F-E4DA-4865-B468-7DD606A39C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4767118F-E4DA-4865-B468-7DD606A39C70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F546ED83-2842-48E6-BA2E-62D4D0161A18}
+	EndGlobalSection
+EndGlobal

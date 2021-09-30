@@ -1,0 +1,15 @@
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\bin\Debug\net5.0\BotRegistroImoveis.Aplicacao.deps.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\bin\Debug\net5.0\BotRegistroImoveis.Aplicacao.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\bin\Debug\net5.0\ref\BotRegistroImoveis.Aplicacao.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\bin\Debug\net5.0\BotRegistroImoveis.Aplicacao.pdb
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\BotRegistroImoveis.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\BotRegistroImoveis.Aplicacao.AssemblyInfoInputs.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\BotRegistroImoveis.Aplicacao.AssemblyInfo.cs
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\BotRegistroImoveis.Aplicacao.csproj.CoreCompileInputs.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\BotRegistroImoveis.Aplicacao.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\ref\BotRegistroImoveis.Aplicacao.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\BotRegistroImoveis.Aplicacao.pdb
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\bin\Debug\net5.0\BotRegistroImoveis.Dominio.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\bin\Debug\net5.0\BotRegistroImoveis.Dominio.pdb
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\BotRegistroImoveis.Aplicacao.csproj.AssemblyReference.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Aplicacao\obj\Debug\net5.0\BotRegistroImoveis.Aplicacao.csproj.CopyComplete
