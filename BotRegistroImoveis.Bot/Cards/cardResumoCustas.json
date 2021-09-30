@@ -15,8 +15,8 @@
                   "type": "TextBlock",
                   "size": "Large",
                   "weight": "Bolder",
-                  "wrap": true,
-                  "text": "Resumo da(s) custa(s)"
+                  "text": "**EXPENSE APPROVAL**",
+                  "wrap": true
                 }
               ],
               "width": "stretch"
@@ -46,15 +46,42 @@
           "items": [
             {
               "type": "TextBlock",
-              "text": "Protocolo:",
+              "text": "Número do protocolo:",
               "wrap": true,
               "size": "ExtraLarge"
+            }
+          ]
+        },
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "size": "ExtraLarge",
+                  "text": "${protocolo}",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
             },
             {
-              "type": "TextBlock",
-              "size": "Large",
-              "text": "${protocolo}",
-              "wrap": true
+              "type": "Column",
+              "items": [
+                {
+                  "type": "ActionSet",
+                  "actions": [
+                    {
+                      "type": "Action.OpenUrl",
+                      "title": "EXPORT AS PDF",
+                      "url": "https://adaptivecards.io"
+                    }
+                  ]
+                }
+              ],
+              "width": "auto"
             }
           ]
         },
@@ -64,7 +91,7 @@
           "facts": [
             {
               "title": "Data recepção:",
-              "value": "${data_recepcao}"
+              "value": "**${data_recepcao}"
             },
             {
               "title": "Data expira:",
@@ -73,6 +100,237 @@
             {
               "title": "Natureza:",
               "value": "${natureza}"
+            },
+            {
+              "title": "Matrícula:",
+              "value": "3445"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "spacing": "Large",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "DATA",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "Large",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "NATUREZA",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "TOTAL",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            }
+          ]
+        }
+      ],
+      "bleed": true
+    },
+    {
+      "$data": "${Valores}",
+      "type": "Container",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "wrap": true,
+                  "text": "01/09/2021"
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "Medium",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Averbação com valor declarado",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "R$ 157,99",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "Small",
+              "selectAction": {
+                "type": "Action.ToggleVisibility",
+                "targetElements": [
+                  "cardContent${$index}",
+                  "chevronDown${$index}",
+                  "chevronUp${$index}"
+                ]
+              },
+              "verticalContentAlignment": "Center",
+              "items": [
+                {
+                  "type": "Image",
+                  "id": "chevronUp${$index}",
+                  "url": "https://adaptivecards.io/content/up.png",
+                  "width": "20px",
+                  "altText": "${description} $${total} expanded",
+                  "isVisible": false
+                }
+              ],
+              "width": "auto"
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "id": "cardContent${$index}",
+          "isVisible": false,
+          "items": [
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "$data": "${custom_fields}",
+                  "type": "TextBlock",
+                  "text": "* ${value}",
+                  "isSubtle": true,
+                  "wrap": true
+                },
+                {
+                  "type": "Container",
+                  "items": [
+                    {
+                      "type": "Input.Text",
+                      "id": "comment${$index}",
+                      "placeholder": "Add your comment here."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "type": "Column",
+                      "items": [
+                        {
+                          "type": "ActionSet",
+                          "actions": [
+                            {
+                              "type": "Action.Submit",
+                              "title": "Send",
+                              "data": {
+                                "id": "_qkQW8dJlUeLVi7ZMEzYVw",
+                                "action": "comment",
+                                "lineItem": 1
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "width": "auto"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "spacing": "Large",
+      "separator": true,
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "horizontalAlignment": "Right",
+              "text": "Total das custas:",
+              "wrap": true
+            }
+          ],
+          "width": "stretch"
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "R$ 157,99",
+              "wrap": true
+            }
+          ],
+          "width": "auto"
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "style": "positive",
+              "data": {
+                "id": "_qkQW8dJlUeLVi7ZMEzYVw",
+                "action": "approve"
+              },
+              "title": "Voltar ao menu principal"
             }
           ]
         }

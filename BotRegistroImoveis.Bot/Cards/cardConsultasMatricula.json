@@ -9,7 +9,7 @@
       "items": [
         {
           "type": "TextBlock",
-          "text": "Custas",
+          "text": "Matrícula",
           "wrap": true,
           "spacing": "None",
           "fontType": "Default",
@@ -34,7 +34,7 @@
           "separator": true,
           "spacing": "ExtraLarge",
           "size": "Medium",
-          "text": "Utilize essa opção para consultar custas relacionadas a um protocolo.",
+          "text": "Utilize essa opção para consultar informações avançadas relacionadas a uma matrícula.",
           "wrap": true
         },
         {
@@ -48,7 +48,7 @@
                   "title": "Utilizar",
                   "style": "positive",
                   "data": {
-                    "opcao": "Custas"
+                    "opcao": "Matricula"
                   }
                 }
               ]

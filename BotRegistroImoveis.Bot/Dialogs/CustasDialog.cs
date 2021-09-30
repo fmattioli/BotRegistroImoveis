@@ -29,7 +29,9 @@ namespace BotRegistroImoveis.Bot.Dialogs
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 ExibirCardConsultarCustas,
-                ProcessarCardCustas
+                ProcessarCardCustas,
+                EncerrarDialogoCustas
+
             }));
 
             // The initial child Dialog to run.
@@ -61,6 +63,12 @@ namespace BotRegistroImoveis.Bot.Dialogs
                 ProtocoloViewModel protocoloViewModel = JsonConvert.DeserializeObject<ProtocoloViewModel>(respostaCard);
                 var templateJson = _gerenciadorCards.RetornarConteudoJson("cardResumoCustas");
 
+
+                var mensagemInicio = $"Entendido, então conforme solicitado, segue um demonstrativo sobre as custa do protocolo {protocoloViewModel.Numero}";
+                await DialogoComum.AcaoDigitando(stepContext);
+                var response = MessageFactory.Text(mensagemInicio);
+                await stepContext.Context.SendActivityAsync(response, cancellationToken);
+
                 AdaptiveCardTemplate template = new AdaptiveCardTemplate(templateJson);
                 var custasModel = await _custasService.ObterCustas(protocoloViewModel.Tipo, protocoloViewModel.Numero);
                 var myData = new CustasProtocolo
@@ -80,7 +88,17 @@ namespace BotRegistroImoveis.Bot.Dialogs
             return await DialogoComum.ExibirMensagemDevidoAMalUsoPorParteDoUsuario(stepContext, msg, cancellationToken, InitialDialogId);
         }
 
-        
-        
+        private async Task<DialogTurnResult> EncerrarDialogoCustas(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var mensagemInicio = $"Foi um prazer ajudar você! Vou te redirecionar para o menu principal";
+            await DialogoComum.AcaoDigitando(stepContext);
+            var response = MessageFactory.Text(mensagemInicio);
+            await stepContext.Context.SendActivityAsync(response, cancellationToken);
+
+            return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), null, cancellationToken);
+        }
+
+
+
     }
 }

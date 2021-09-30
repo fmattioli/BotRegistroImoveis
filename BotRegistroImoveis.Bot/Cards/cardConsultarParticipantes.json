@@ -9,7 +9,7 @@
       "items": [
         {
           "type": "TextBlock",
-          "text": "Participantes",
+          "text": "Participantes (Em breve)",
           "wrap": true,
           "spacing": "None",
           "fontType": "Default",
@@ -51,7 +51,8 @@
                     "opcao": "Participantes"
                   }
                 }
-              ]
+              ],
+              "isVisible": false
             }
           ],
           "separator": true,

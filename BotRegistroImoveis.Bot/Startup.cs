@@ -34,9 +34,10 @@ namespace BotRegistroImoveis.Bot
             services.AddSingleton<ConversationState>();
 
             // The MainDialog that will be run by the bot.
+            services.AddSingleton<MainDialog>();
             services.AddSingleton<ConsultaDialog>();
             services.AddSingleton<CustasDialog>();
-            services.AddSingleton<MainDialog>();
+            services.AddSingleton<TituloCertidaoDialog>();
             services.AddSingleton<GerenciarCards>();
 
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
