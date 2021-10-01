@@ -327,10 +327,22 @@
               "type": "Action.Submit",
               "style": "positive",
               "data": {
-                "id": "_qkQW8dJlUeLVi7ZMEzYVw",
-                "action": "approve"
+                "opcao": "MenuPrincipal"
               },
               "title": "Voltar ao menu principal"
+            }
+          ]
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "style": "positive",
+              "data": {
+                "opcao": "menuProtocolosCertidao"
+              },
+              "title": "Voltar ao menu Protocolos/Certidão"
             }
           ]
         }

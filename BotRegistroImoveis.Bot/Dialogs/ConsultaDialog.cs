@@ -18,12 +18,13 @@ namespace BotRegistroImoveis.Bot.Dialogs
     {
         private readonly GerenciarCards _gerenciadorCards;
         private readonly IUtilitarioService _utilitario;
-        public ConsultaDialog(GerenciarCards gerenciadorCards, TituloCertidaoDialog tituloCertidaoDialog, IUtilitarioService utilitario)
+        public ConsultaDialog(GerenciarCards gerenciadorCards, TituloCertidaoDialog tituloCertidaoDialog, MatriculaDialog matriculaDialog, IUtilitarioService utilitario)
             : base(nameof(ConsultaDialog))
         {
             _utilitario = utilitario;
             _gerenciadorCards = gerenciadorCards;
             AddDialog(tituloCertidaoDialog);
+            AddDialog(matriculaDialog);
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 ExibirOpcoesConsultas,
@@ -35,10 +36,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
         }
         private async Task<DialogTurnResult> ExibirOpcoesConsultas(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var mensagemInicio = stepContext.Options?.ToString() ?? "Escolha abaixo qual opção você deseja utilizar! \U0001F609";
-            await DialogoComum.AcaoDigitando(stepContext);
-            var response = MessageFactory.Text(mensagemInicio);
-            await stepContext.Context.SendActivityAsync(response, cancellationToken);
+            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, "Escolha abaixo qual opção você deseja utilizar! \U0001F609");
             var welcomeCard = _gerenciadorCards.RetornarAdaptiveCard
             (
                 new List<string>()
@@ -62,6 +60,8 @@ namespace BotRegistroImoveis.Bot.Dialogs
                 {
                     case "TituloCertidao":
                         return await stepContext.BeginDialogAsync(nameof(TituloCertidaoDialog), null, cancellationToken);
+                    case "Matricula":
+                        return await stepContext.BeginDialogAsync(nameof(MatriculaDialog), null, cancellationToken);
                     default:
                         return await stepContext.ReplaceDialogAsync(InitialDialogId, msgErro, cancellationToken);
                 }

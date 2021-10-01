@@ -9,6 +9,6 @@ namespace BotRegistroImoveis.Aplicacao.Interfaces
 {
     public interface ICustasService
     {
-        Task<CustasProtocolo> ObterCustas(string TipoProtocolo, string Protocolo);
+        Task<CustasProtocoloViewModel> ObterCustas(string TipoProtocolo, string Protocolo);
     }
 }

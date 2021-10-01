@@ -35,10 +35,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
 
         private async Task<DialogTurnResult> ExibirOpcoesConsultasTituloCertidao(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var mensagemInicio = stepContext.Options?.ToString() ?? "Entendido! abaixo você encontra as consultas disponíveis para título e certidões! \U0001F609";
-            await DialogoComum.AcaoDigitando(stepContext);
-            var response = MessageFactory.Text(mensagemInicio);
-            await stepContext.Context.SendActivityAsync(response, cancellationToken);
+            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, "Entendido! abaixo você encontra as consultas disponíveis para título e certidões! \U0001F609");
             var welcomeCard = _gerenciadorCards.RetornarAdaptiveCard
             (
                 new List<string>()
@@ -68,7 +65,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
             }
 
             var msg = "Infelizmente não consegui entender o que você disse \U0001F629. Vamos começar novamente, selecione abaixo opção que você deseja utilizar, combinado? \U0001F609";
-            return await stepContext.ReplaceDialogAsync(InitialDialogId, msg, cancellationToken);
+            return  await DialogoComum.ExibirMensagemDevidoAMalUsoPorParteDoUsuario(stepContext, msg, cancellationToken, InitialDialogId);
 
         }
     }

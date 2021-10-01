@@ -90,5 +90,26 @@ namespace BotRegistroImoveis.Bot.Cards.Gerenciador
             return opts;
         }
 
+        public PromptOptions CriarListaAdaptiveCardBinding(IList<string> jsons)
+        {
+            var lista = new List<Attachment>();
+            foreach (var json in jsons)
+                lista.Add(CriarAttachmentFromJson(json));
+            
+            var opts = new PromptOptions
+            {
+                Prompt = new Activity
+                {
+                    AttachmentLayout = AttachmentLayoutTypes.Carousel,
+                    Attachments = lista,
+                    Type = ActivityTypes.Message,
+                },
+            };
+
+            return opts;
+        }
+
+
+
     }
 }

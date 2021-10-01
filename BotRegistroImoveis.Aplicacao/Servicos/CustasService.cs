@@ -13,10 +13,10 @@ namespace BotRegistroImoveis.Aplicacao.Servicos
         {
             this.custasRepositorio = custasRepositorio;
         }
-        public async Task<CustasProtocolo> ObterCustas(string TipoProtocolo, string Protocolo)
+        public async Task<CustasProtocoloViewModel> ObterCustas(string TipoProtocolo, string Protocolo)
         {
             var custas = await custasRepositorio.ObterCustas(TipoProtocolo, Protocolo);
-            return new CustasProtocolo()
+            return new CustasProtocoloViewModel()
             {
                 Protocolo = custas.Protocolo,
                 Data_Expira = custas.Data_Expira,

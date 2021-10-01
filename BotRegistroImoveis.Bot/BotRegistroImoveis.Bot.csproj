@@ -7,22 +7,26 @@
 
   <ItemGroup>
     <Content Remove="Cards\cardConsultarCustas.json" />
+    <Content Remove="Cards\cardConsultarMatricula.json" />
     <Content Remove="Cards\cardConsultarParticipantes.json" />
     <Content Remove="Cards\cardConsultarTitulo.json" />
     <Content Remove="Cards\cardConsultasMatricula.json" />
     <Content Remove="Cards\cardObterCustas.json" />
     <Content Remove="Cards\cardObterParticipantes.json" />
     <Content Remove="Cards\cardResumoCustas.json" />
+    <Content Remove="Cards\CardsMatricula\cardParticipantesMatricula.json" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Cards\cardConsultasMatricula.json" />
-    <EmbeddedResource Include="Cards\cardConsultarTitulo.json" />
-    <EmbeddedResource Include="Cards\cardConsultarParticipantes.json" />
-    <EmbeddedResource Include="Cards\cardConsultarCustas.json" />
-    <EmbeddedResource Include="Cards\cardObterCustas.json" />
-    <EmbeddedResource Include="Cards\cardResumoCustas.json" />
-    <EmbeddedResource Include="Cards\cardObterParticipantes.json" />
+    <EmbeddedResource Include="Cards\CardsConsulta\cardConsultasMatricula.json" />
+    <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarTitulo.json" />
+    <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarParticipantes.json" />
+    <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarCustas.json" />
+    <EmbeddedResource Include="Cards\CardsCustas\cardObterCustas.json" />
+    <EmbeddedResource Include="Cards\CardsMatricula\cardParticipantesMatricula.json" />
+    <EmbeddedResource Include="Cards\CardsMatricula\cardOpcoesMatricula.json" />
+    <EmbeddedResource Include="Cards\CardsCustas\cardResumoCustas.json" />
+    <EmbeddedResource Include="Cards\CardsParticipantes\cardObterParticipantes.json" />
   </ItemGroup>
 
   <ItemGroup>

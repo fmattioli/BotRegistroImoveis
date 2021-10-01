@@ -40,11 +40,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
 
         private async Task<DialogTurnResult> ExibirCardConsultarCustas(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var mensagemInicio = stepContext.Options?.ToString() ?? "Vai ser um prazer te ajudar! Clique em 'utilizar' e preencha as infos necessárias que eu irei retornar as custas para você! \U0001F609";
-            await DialogoComum.AcaoDigitando(stepContext);
-            var response = MessageFactory.Text(mensagemInicio);
-            await stepContext.Context.SendActivityAsync(response, cancellationToken);
-
+            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, "Vai ser um prazer te ajudar! Clique em 'utilizar' e preencha as infos necessárias que eu irei retornar as custas para você! \U0001F609");
             var welcomeCard = _gerenciadorCards.RetornarAdaptiveCard(
                 new List<string>()
                 {
@@ -61,17 +57,12 @@ namespace BotRegistroImoveis.Bot.Dialogs
             if (await _utilitario.JsonValido(respostaCard))
             {
                 ProtocoloViewModel protocoloViewModel = JsonConvert.DeserializeObject<ProtocoloViewModel>(respostaCard);
+                await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, $"Entendido, então conforme solicitado, segue um demonstrativo sobre as custa do protocolo {protocoloViewModel.Numero}");
                 var templateJson = _gerenciadorCards.RetornarConteudoJson("cardResumoCustas");
-
-
-                var mensagemInicio = $"Entendido, então conforme solicitado, segue um demonstrativo sobre as custa do protocolo {protocoloViewModel.Numero}";
-                await DialogoComum.AcaoDigitando(stepContext);
-                var response = MessageFactory.Text(mensagemInicio);
-                await stepContext.Context.SendActivityAsync(response, cancellationToken);
-
+                
                 AdaptiveCardTemplate template = new AdaptiveCardTemplate(templateJson);
                 var custasModel = await _custasService.ObterCustas(protocoloViewModel.Tipo, protocoloViewModel.Numero);
-                var myData = new CustasProtocolo
+                var myData = new CustasProtocoloViewModel
                 {
                     Protocolo = custasModel.Protocolo,
                     Data_Expira = custasModel.Data_Expira,
@@ -90,15 +81,21 @@ namespace BotRegistroImoveis.Bot.Dialogs
 
         private async Task<DialogTurnResult> EncerrarDialogoCustas(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var mensagemInicio = $"Foi um prazer ajudar você! Vou te redirecionar para o menu principal";
-            await DialogoComum.AcaoDigitando(stepContext);
-            var response = MessageFactory.Text(mensagemInicio);
-            await stepContext.Context.SendActivityAsync(response, cancellationToken);
+            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, "Foi um prazer ajudar você! Vou te redirecionar para o menu principal");
+            string respostaCard = stepContext.Result?.ToString();
+            if (await _utilitario.JsonValido(respostaCard))
+            {
+                ConsultaViewModel consulta = JsonConvert.DeserializeObject<ConsultaViewModel>(respostaCard);
+                switch (consulta.Opcao)
+                {
+                    case "MenuPrincipal":
+                        return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), null, cancellationToken);
+                    default:
+                        return await stepContext.BeginDialogAsync(nameof(TituloCertidaoDialog), null, cancellationToken);
+                }
+            }
 
             return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), null, cancellationToken);
         }
-
-
-
     }
 }

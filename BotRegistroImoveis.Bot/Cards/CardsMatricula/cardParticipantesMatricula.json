@@ -1,0 +1,59 @@
+﻿{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "spacing": "None",
+      "fontType": "Default",
+      "horizontalAlignment": "Center",
+      "height": "stretch",
+      "color": "Accent",
+      "separator": true,
+      "size": "Medium",
+      "isSubtle": true,
+      "text": "Participantes"
+    },
+    {
+      "type": "TextBlock",
+      "spacing": "Medium",
+      "wrap": true,
+      "height": "stretch",
+      "separator": true,
+      "weight": "Lighter",
+      "color": "Dark",
+      "horizontalAlignment": "Center",
+      "text": "Informe um ato para que seja realizado as buscas de participantes relacionados a: ${tipolivro} ${numero}"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.ShowCard",
+      "title": "Utilizar",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Input.Text",
+            "id": "Ato",
+            "label": "Ato: ",
+            "isRequired": true,
+            "errorMessage": "Informe o número do ato",
+            "placeholder": "Informe o número do ato",
+            "separator": true
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "OK"
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+      },
+      "style": "positive"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3"
+}
