@@ -34,7 +34,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
 
         private async Task<DialogTurnResult> ObterInfomarmacoesSobreTipoBusca(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, "Legal, agora faça o seguinte: Informe um tipo de busca e depois informa um valor condizente a escolha anterior, combinado? \U0001F609");
+            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, "Legal, me informa o tipo do livro e escolha uma opção de consulta. Combinado? \U0001F609");
             var welcomeCard = _gerenciadorCards.RetornarAdaptiveCard
             (
                 new List<string>()
@@ -55,10 +55,15 @@ namespace BotRegistroImoveis.Bot.Dialogs
                 var listaJsons = new List<string>();
                 MatriculaViewModel matriculaViewModel = JsonConvert.DeserializeObject<MatriculaViewModel>(respostaCard);
                 await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, $"Entendido! Aqui estão as opções de buscas para o tipo de livro {(matriculaViewModel.TipoLivro == "1" ? "Matrícula" : "Transcrição")}:  número: {matriculaViewModel.Numero}");
+                
+                //cardParticipantesMatricula
                 var templateJson = _gerenciadorCards.RetornarConteudoJson("cardParticipantesMatricula");
                 listaJsons.Add(MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
+
+                //cardUltimasCertidoes
+                templateJson = _gerenciadorCards.RetornarConteudoJson("cardUltimasCertidoes");
                 listaJsons.Add(MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
-                listaJsons.Add(MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
+                
                 return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
             }
 

@@ -43,11 +43,12 @@ namespace BotRegistroImoveis.Bot.Dialogs
         /// <returns></returns>
         public static async Task CriarEEnviarMensagem(WaterfallStepContext stepContext, CancellationToken cancellationToken, string mensagem)
         {
-            var mensagemInicio = stepContext.Options?.ToString() ?? mensagem;
             await DialogoComum.AcaoDigitando(stepContext);
-            var response = MessageFactory.Text(mensagemInicio);
+            var response = MessageFactory.Text(mensagem);
             await stepContext.Context.SendActivityAsync(response, cancellationToken);
         }
+
+
 
 
     }

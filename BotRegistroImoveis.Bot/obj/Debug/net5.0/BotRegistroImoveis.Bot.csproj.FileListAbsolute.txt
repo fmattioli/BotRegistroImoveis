@@ -76,11 +76,11 @@ C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\De
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\BotRegistroImoveis.Infra.IoC.dll
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\BotRegistroImoveis.Infra.IoC.pdb
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\BotRegistroImoveis.Infra.Data.pdb
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsConsulta\cardConsultarCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsConsulta\cardConsultarParticipantes.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsConsulta\cardConsultarTitulo.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsConsulta\cardConsultasMatricula.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsCustas\cardObterCustas.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsCustas\cardResumoCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsParticipantes\cardObterParticipantes.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsMatricula\cardOpcoesMatricula.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsTitulos\cardObterCustas.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsTitulos\cardResumoCustas.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsTitulos\cardConsultarCustasProtocolo.json

@@ -23,7 +23,7 @@
       "weight": "Lighter",
       "color": "Dark",
       "horizontalAlignment": "Center",
-      "text": "Informe um ato para que seja realizado as buscas de participantes relacionados a: ${tipolivro} ${numero}"
+      "text": "Informe um número de ato relacionado a ${tipolivro} ${numero} para verificar os participantes"
     }
   ],
   "actions": [

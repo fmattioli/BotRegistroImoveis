@@ -16,7 +16,7 @@
     },
     {
       "type": "TextBlock",
-      "text": "Utilize essa opção para consultar diversas informações relacionadas a(s) matrícula(s). Pesquisa por livro, documento ou nome.",
+      "text": "Utilize essa opção para consultar diversas informações relacionadas a uma matrícula.",
       "spacing": "Medium",
       "wrap": true,
       "height": "stretch",
@@ -29,7 +29,7 @@
   "actions": [
     {
       "type": "Action.ShowCard",
-      "title": "Utilizar",
+      "title": "Informar dados",
       "card": {
         "type": "AdaptiveCard",
         "body": [
@@ -53,31 +53,12 @@
             ]
           },
           {
-            "label": "Consultar por:",
-            "isSubtle": true,
-            "style": "expanded",
-            "id": "TipoConsulta",
-            "type": "Input.ChoiceSet",
-            "value": "1",
-            "separator": true,
-            "choices": [
-              {
-                "title": "Número do livro",
-                "value": "1"
-              },
-              {
-                "title": "Documento do participante (Em breve)",
-                "value": "2"
-              }
-            ]
-          },
-          {
             "type": "Input.Text",
             "id": "Numero",
             "label": "Número: ",
             "isRequired": true,
-            "errorMessage": "Informe o número matrícula ou documento",
-            "placeholder": "Informe o número matrícula ou documento",
+            "errorMessage": "Informe o número matrícula",
+            "placeholder": "Informe o número matrícula",
             "separator": true
           }
         ],

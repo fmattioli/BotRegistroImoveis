@@ -86,12 +86,12 @@ namespace BotRegistroImoveis.Bot.Dialogs
             if (await _utilitario.JsonValido(respostaCard))
             {
                 ConsultaViewModel consulta = JsonConvert.DeserializeObject<ConsultaViewModel>(respostaCard);
-                switch (consulta.Opcao)
+                switch (consulta.OpcaoSelecionada)
                 {
                     case "MenuPrincipal":
                         return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), null, cancellationToken);
                     default:
-                        return await stepContext.BeginDialogAsync(nameof(TituloCertidaoDialog), null, cancellationToken);
+                        return await stepContext.BeginDialogAsync(nameof(TituloDialog), null, cancellationToken);
                 }
             }
 

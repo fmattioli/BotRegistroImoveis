@@ -12,60 +12,41 @@
       "separator": true,
       "size": "Medium",
       "isSubtle": true,
-      "text": "Matrícula"
+      "text": "Últimas certidões solicitadas"
     },
     {
       "type": "TextBlock",
-      "text": "Utilize essa opção para ter acesso a diversos modelos de consultas referentes a informações de uma matrícula.",
       "spacing": "Medium",
       "wrap": true,
       "height": "stretch",
       "separator": true,
       "weight": "Lighter",
       "color": "Dark",
-      "horizontalAlignment": "Center"
+      "horizontalAlignment": "Center",
+      "text": "Verifique os últimos pedidos de certidão relacionadas a ${tipolivro} ${numero}"
     }
   ],
   "actions": [
     {
       "type": "Action.ShowCard",
-      "title": "Informar dados",
+      "title": "Utilizar",
       "card": {
         "type": "AdaptiveCard",
         "body": [
           {
-            "label": "Pesquisar por: ",
-            "isSubtle": true,
-            "style": "expanded",
-            "id": "TipoLivro",
-            "type": "Input.ChoiceSet",
-            "value": "1",
-            "separator": true,
-            "choices": [
-              {
-                "title": "Livro",
-                "value": "1"
-              },
-              {
-                "title": "Documento do participante (Disponível em breve)",
-                "value": "2"
-              }
-            ]
-          },
-          {
             "type": "Input.Text",
-            "id": "Numero",
-            "label": "Número: ",
+            "id": "Ato",
+            "label": "Ato: ",
             "isRequired": true,
-            "errorMessage": "Informe o número do livro ou um docto",
-            "placeholder": "Número do livro ou documento do participante",
+            "errorMessage": "Informe o número do ato",
+            "placeholder": "Informe o número do ato",
             "separator": true
           }
         ],
         "actions": [
           {
             "type": "Action.Submit",
-            "title": "Pesquisar"
+            "title": "OK"
           }
         ],
         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"

@@ -9,7 +9,7 @@
       "items": [
         {
           "type": "TextBlock",
-          "text": "Custas",
+          "text": "Contraditório",
           "wrap": true,
           "spacing": "None",
           "fontType": "Default",
@@ -33,8 +33,8 @@
           "fontType": "Default",
           "separator": true,
           "spacing": "ExtraLarge",
-          "size": "Medium",
-          "text": "Utilize essa opção para consultar custas relacionadas a um protocolo.",
+          "text": "Utilize essa opção para visualizar o contraditório do protocolo ${protocolo}",
+          "horizontalAlignment": "Center",
           "wrap": true
         },
         {
@@ -45,10 +45,10 @@
               "actions": [
                 {
                   "type": "Action.Submit",
-                  "title": "Utilizar",
+                  "title": "Visualizar contraditório",
                   "style": "positive",
                   "data": {
-                    "opcao": "Custas"
+                    "opcao": "Contraditorio"
                   }
                 }
               ]
