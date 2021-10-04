@@ -12,7 +12,7 @@
       "separator": true,
       "size": "Medium",
       "isSubtle": true,
-      "text": "Matrícula"
+      "text": "Busca tridimensional"
     },
     {
       "type": "TextBlock",
@@ -37,7 +37,7 @@
             "label": "Pesquisar por: ",
             "isSubtle": true,
             "style": "expanded",
-            "id": "TipoLivro",
+            "id": "TipoBuscaLivroParticipante",
             "type": "Input.ChoiceSet",
             "value": "1",
             "separator": true,

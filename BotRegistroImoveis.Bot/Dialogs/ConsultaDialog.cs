@@ -18,12 +18,13 @@ namespace BotRegistroImoveis.Bot.Dialogs
     {
         private readonly GerenciarCards _gerenciadorCards;
         private readonly IUtilitarioService _utilitario;
-        public ConsultaDialog(GerenciarCards gerenciadorCards, TituloDialog tituloCertidaoDialog, MatriculaDialog matriculaDialog, IUtilitarioService utilitario)
+        public ConsultaDialog(GerenciarCards gerenciadorCards, TituloDialog tituloCertidaoDialog, CertidaoDialog certidaoDialog, MatriculaDialog matriculaDialog, IUtilitarioService utilitario)
             : base(nameof(ConsultaDialog))
         {
             _utilitario = utilitario;
             _gerenciadorCards = gerenciadorCards;
             AddDialog(tituloCertidaoDialog);
+            AddDialog(certidaoDialog);
             AddDialog(matriculaDialog);
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
@@ -63,7 +64,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
                     case "Titulo":
                         return await stepContext.BeginDialogAsync(nameof(TituloDialog), consulta, cancellationToken);
                     case "Certidao":
-                        return await stepContext.BeginDialogAsync(nameof(MatriculaDialog), consulta, cancellationToken);
+                        return await stepContext.BeginDialogAsync(nameof(CertidaoDialog), consulta, cancellationToken);
                     case "Matricula":
                         return await stepContext.BeginDialogAsync(nameof(MatriculaDialog), consulta, cancellationToken);
                     default:
@@ -81,7 +82,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
             if (!string.IsNullOrEmpty(consulta.BuscarNumeroPedidoDeCertidao))
                 return "Certidao";
 
-            if (!string.IsNullOrEmpty(consulta.TipoBuscaLivroParticipante))
+            if (!string.IsNullOrEmpty(consulta.TipoLivro))
                 return "Matricula";
 
             return "";

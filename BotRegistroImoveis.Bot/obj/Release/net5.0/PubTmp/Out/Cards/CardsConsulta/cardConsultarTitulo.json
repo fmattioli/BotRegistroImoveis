@@ -54,7 +54,7 @@
           },
           {
             "type": "Input.Text",
-            "id": "PedidoCertidao",
+            "id": "Protocolo",
             "label": "Protocolo: ",
             "isRequired": true,
             "errorMessage": "Informe o número do protocolo",

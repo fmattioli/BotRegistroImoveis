@@ -1,59 +1,69 @@
 ﻿{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
+  "version": "1.3",
+  "speak": "Your  meeting about \"Adaptive Card design session\" is starting at ${formatDateTime(start.dateTime, 'HH:mm')}pmDo you want to snooze  or do you want to send a late notification to the attendees?",
   "body": [
     {
-      "type": "TextBlock",
-      "wrap": true,
-      "spacing": "None",
-      "fontType": "Default",
-      "horizontalAlignment": "Center",
-      "height": "stretch",
-      "color": "Accent",
-      "separator": true,
-      "size": "Medium",
-      "isSubtle": true,
-      "text": "Últimas certidões solicitadas"
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "wrap": true,
+          "spacing": "None",
+          "fontType": "Default",
+          "horizontalAlignment": "Center",
+          "height": "stretch",
+          "color": "Accent",
+          "separator": true,
+          "size": "Medium",
+          "isSubtle": true,
+          "text": "Últimas certidões solicitadas"
+        }
+      ]
     },
     {
-      "type": "TextBlock",
-      "spacing": "Medium",
-      "wrap": true,
-      "height": "stretch",
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "height": "stretch",
+          "maxLines": 0,
+          "color": "Dark",
+          "fontType": "Default",
+          "separator": true,
+          "spacing": "ExtraLarge",
+          "text": "Utilize essa opção para visualizar os últimos pedidos de certidões referentes a ${TipoLivro}-${NumeroLivro}.",
+          "horizontalAlignment": "Center",
+          "wrap": true,
+          "weight": "Lighter"
+        },
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "title": "Visualizar certidões",
+                  "style": "positive",
+                  "data": {
+                    "opcao": "UltimasCertidoes"
+                  }
+                }
+              ]
+            }
+          ],
+          "separator": true,
+          "spacing": "Medium",
+          "height": "stretch",
+          "verticalContentAlignment": "Center",
+          "bleed": true
+        }
+      ],
       "separator": true,
-      "weight": "Lighter",
-      "color": "Dark",
-      "horizontalAlignment": "Center",
-      "text": "Verifique os últimos pedidos de certidão relacionadas a ${tipolivro} ${numero}"
+      "spacing": "Medium"
     }
-  ],
-  "actions": [
-    {
-      "type": "Action.ShowCard",
-      "title": "Utilizar",
-      "card": {
-        "type": "AdaptiveCard",
-        "body": [
-          {
-            "type": "Input.Text",
-            "id": "Ato",
-            "label": "Ato: ",
-            "isRequired": true,
-            "errorMessage": "Informe o número do ato",
-            "placeholder": "Informe o número do ato",
-            "separator": true
-          }
-        ],
-        "actions": [
-          {
-            "type": "Action.Submit",
-            "title": "OK"
-          }
-        ],
-        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
-      },
-      "style": "positive"
-    }
-  ],
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.3"
+  ]
 }

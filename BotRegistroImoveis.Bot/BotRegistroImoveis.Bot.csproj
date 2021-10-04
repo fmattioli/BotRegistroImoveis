@@ -14,25 +14,28 @@
     <Content Remove="Cards\cardObterCustas.json" />
     <Content Remove="Cards\cardObterParticipantes.json" />
     <Content Remove="Cards\cardResumoCustas.json" />
+    <Content Remove="Cards\CardsCertidao\cardConsultarCustasCertidao.json" />
+    <Content Remove="Cards\CardsCertidao\cardConsultarSelosCertidao.json" />
     <Content Remove="Cards\CardsConsulta\cardConsultarCertidao.json" />
-    <Content Remove="Cards\CardsMatricula\cardParticipantesMatricula.json" />
     <Content Remove="Cards\CardsMatricula\cardUltimasCertidoes.json" />
+    <Content Remove="Cards\CardsMatricula\cardUltimosRegistros.json" />
     <Content Remove="Cards\CardsTitulos\cardConsultarContraditorio.json" />
     <Content Remove="Cards\CardsTitulos\cardConsultarSelosTitulos.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Cards\CardsCertidao\cardConsultarCustasCertidao.json" />
+    <EmbeddedResource Include="Cards\CardsCertidao\cardConsultarSelosCertidao.json" />
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarCertidao.json" />
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultasMatricula.json" />
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarTitulo.json" />
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarParticipantes.json" />
+    <EmbeddedResource Include="Cards\CardsMatricula\cardUltimosRegistros.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardConsultarSelosTitulos.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardConsultarContraditorio.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardConsultarCustasProtocolo.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardObterCustas.json" />
     <EmbeddedResource Include="Cards\CardsMatricula\cardUltimasCertidoes.json" />
-    <EmbeddedResource Include="Cards\CardsMatricula\cardParticipantesMatricula.json" />
-    <EmbeddedResource Include="Cards\CardsMatricula\cardOpcoesMatricula.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardResumoCustas.json" />
     <EmbeddedResource Include="Cards\CardsParticipantes\cardObterParticipantes.json" />
   </ItemGroup>

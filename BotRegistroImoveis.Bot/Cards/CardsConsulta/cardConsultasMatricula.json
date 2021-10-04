@@ -12,11 +12,11 @@
       "separator": true,
       "size": "Medium",
       "isSubtle": true,
-      "text": "Busca tridimensional"
+      "text": "Busca tridimensional (Livro)"
     },
     {
       "type": "TextBlock",
-      "text": "Utilize essa opção para ter acesso a diversos modelos de consultas referentes a informações de uma matrícula.",
+      "text": "Utilize essa opção para ter acesso a diversos modelos de consultas referentes a informações de um livro.",
       "spacing": "Medium",
       "wrap": true,
       "height": "stretch",
@@ -34,27 +34,31 @@
         "type": "AdaptiveCard",
         "body": [
           {
-            "label": "Pesquisar por: ",
+            "label": "Tipo do livro: ",
             "isSubtle": true,
             "style": "expanded",
-            "id": "TipoBuscaLivroParticipante",
+            "id": "TipoLivro",
             "type": "Input.ChoiceSet",
             "value": "1",
             "separator": true,
             "choices": [
               {
-                "title": "Livro",
-                "value": "1"
+                "title": "Matrícula",
+                "value": "Matrícula"
               },
               {
-                "title": "Documento do participante (Disponível em breve)",
-                "value": "2"
+                "title": "Transcrição",
+                "value": "Transcrição"
+              },
+              {
+                "title": "Indisponibilidade",
+                "value": "Indisponibilidade"
               }
             ]
           },
           {
             "type": "Input.Text",
-            "id": "Numero",
+            "id": "NumeroLivro",
             "label": "Número: ",
             "isRequired": true,
             "errorMessage": "Informe o número do livro ou um docto",

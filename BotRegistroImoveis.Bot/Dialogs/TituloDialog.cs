@@ -42,15 +42,15 @@ namespace BotRegistroImoveis.Bot.Dialogs
 
             //cardConsultarContraditorio
             var templateJson = _gerenciadorCards.RetornarConteudoJson("cardConsultarContraditorio");
-            listaJsons.Add(MesclarDadosParaExibirNoCard(consulta, templateJson));
+            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(consulta, templateJson));
 
             //cardConsultarSelosTitulos
             templateJson = _gerenciadorCards.RetornarConteudoJson("cardConsultarSelosTitulos");
-            listaJsons.Add(MesclarDadosParaExibirNoCard(consulta, templateJson));
+            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(consulta, templateJson));
 
             ////cardConsultarCustasProtocolo
             templateJson = _gerenciadorCards.RetornarConteudoJson("cardConsultarCustasProtocolo");
-            listaJsons.Add(MesclarDadosParaExibirNoCard(consulta, templateJson));
+            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(consulta, templateJson));
 
 
 
@@ -78,11 +78,6 @@ namespace BotRegistroImoveis.Bot.Dialogs
 
         }
 
-        private string MesclarDadosParaExibirNoCard(ConsultaViewModel consultaViewModel, string templateJson)
-        {
-            AdaptiveCardTemplate template = new AdaptiveCardTemplate(templateJson);
-            var dadosMesclar = consultaViewModel;
-            return template.Expand(dadosMesclar);
-        }
+        
     }
 }

@@ -8,27 +8,25 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\felipe.santos\\.nuget\\packages\\": {},
+    "C:\\Users\\felip\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj",
+      "projectUniqueName": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj",
       "projectName": "BotRegistroImoveis.Dominio",
-      "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj",
-      "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
-      "outputPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\obj\\",
+      "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj",
+      "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+      "outputPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\felipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -70,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

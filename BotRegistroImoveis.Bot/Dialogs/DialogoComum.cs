@@ -1,4 +1,5 @@
-﻿using Microsoft.Bot.Builder;
+﻿using AdaptiveCards.Templating;
+using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
 using System;
@@ -46,6 +47,13 @@ namespace BotRegistroImoveis.Bot.Dialogs
             await DialogoComum.AcaoDigitando(stepContext);
             var response = MessageFactory.Text(mensagem);
             await stepContext.Context.SendActivityAsync(response, cancellationToken);
+        }
+
+        public static string MesclarDadosParaExibirNoCard(object objeto, string templateJson)
+        {
+            AdaptiveCardTemplate template = new AdaptiveCardTemplate(templateJson);
+            var dadosMesclar = objeto;
+            return template.Expand(dadosMesclar);
         }
 
 

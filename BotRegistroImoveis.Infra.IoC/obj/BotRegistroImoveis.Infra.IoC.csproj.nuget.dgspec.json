@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj": {}
+    "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj": {}
   },
   "projects": {
-    "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj": {
+    "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj",
+        "projectUniqueName": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj",
         "projectName": "BotRegistroImoveis.Aplicacao",
-        "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj",
-        "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\obj\\",
+        "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\felipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -35,8 +34,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj": {
-                "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj"
+              "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj": {
+                "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj"
               }
             }
           }
@@ -65,26 +64,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj": {
+    "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj",
+        "projectUniqueName": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj",
         "projectName": "BotRegistroImoveis.Dominio",
-        "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj",
-        "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\obj\\",
+        "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\felipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -126,26 +124,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj": {
+    "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj",
+        "projectUniqueName": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj",
         "projectName": "BotRegistroImoveis.Infra.Data",
-        "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\obj\\",
+        "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\felipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -161,8 +158,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj": {
-                "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj"
+              "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj": {
+                "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj"
               }
             }
           }
@@ -191,26 +188,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj": {
+    "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj",
+        "projectUniqueName": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj",
         "projectName": "BotRegistroImoveis.Infra.IoC",
-        "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj",
-        "packagesPath": "C:\\Users\\felipe.santos\\.nuget\\packages\\",
-        "outputPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\obj\\",
+        "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\BotRegistroImoveis.Infra.IoC.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\felipe.santos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -226,14 +222,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj": {
-                "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj"
+              "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj": {
+                "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Aplicacao\\BotRegistroImoveis.Aplicacao.csproj"
               },
-              "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj": {
-                "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj"
+              "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj": {
+                "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Dominio\\BotRegistroImoveis.Dominio.csproj"
               },
-              "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj": {
-                "projectPath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj"
+              "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj": {
+                "projectPath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj"
               }
             }
           }
@@ -272,7 +268,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

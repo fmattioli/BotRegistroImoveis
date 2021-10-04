@@ -24,30 +24,31 @@ namespace BotRegistroImoveis.Bot.Dialogs
             _utilitario = utilitario;
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
-                ObterInfomarmacoesSobreTipoBusca,
-                ExibirOpcoesDeBusca
+                ExibirOpcoesConsultasMatricula,
+                ProcessarOpcaoSelecionada
             }));
 
             // The initial child Dialog to run.
             InitialDialogId = nameof(WaterfallDialog);
         }
 
-        private async Task<DialogTurnResult> ObterInfomarmacoesSobreTipoBusca(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> ExibirOpcoesConsultasMatricula(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, "Legal, me informa o tipo do livro e escolha uma opção de consulta. Combinado? \U0001F609");
-            var welcomeCard = _gerenciadorCards.RetornarAdaptiveCard
-            (
-                new List<string>()
-                {
-                    "cardOpcoesMatricula"
-                }
-            );
+            var listaJsons = new List<string>();
+            var consulta = (ConsultaViewModel)stepContext.Options;
+            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, $"Entendido! abaixo você encontra as consultas disponíveis para ${consulta.TipoLivro}-{consulta.NumeroLivro}! \U0001F609");
 
-            return await stepContext.PromptAsync(nameof(TextPrompt), welcomeCard, cancellationToken);
+            var templateJson = _gerenciadorCards.RetornarConteudoJson("cardUltimasCertidoes");
+            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(consulta, templateJson));
+
+            templateJson = _gerenciadorCards.RetornarConteudoJson("cardUltimosRegistros");
+            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(consulta, templateJson));
+
+            return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
 
         }
 
-        private async Task<DialogTurnResult> ExibirOpcoesDeBusca(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> ProcessarOpcaoSelecionada(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             string respostaCard = stepContext.Result?.ToString();
             if (await _utilitario.JsonValido(respostaCard))
@@ -58,11 +59,11 @@ namespace BotRegistroImoveis.Bot.Dialogs
                 
                 //cardParticipantesMatricula
                 var templateJson = _gerenciadorCards.RetornarConteudoJson("cardParticipantesMatricula");
-                listaJsons.Add(MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
+                listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
 
                 //cardUltimasCertidoes
                 templateJson = _gerenciadorCards.RetornarConteudoJson("cardUltimasCertidoes");
-                listaJsons.Add(MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
+                listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
                 
                 return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
             }
@@ -71,11 +72,5 @@ namespace BotRegistroImoveis.Bot.Dialogs
             return await DialogoComum.ExibirMensagemDevidoAMalUsoPorParteDoUsuario(stepContext, msg, cancellationToken, InitialDialogId);
         }
 
-        private string MesclarDadosParaExibirNoCard(MatriculaViewModel matriculaViewModel, string templateJson)
-        {
-            AdaptiveCardTemplate template = new AdaptiveCardTemplate(templateJson);
-            var dadosMesclar = matriculaViewModel;
-            return template.Expand(dadosMesclar);
-        }
     }
 }

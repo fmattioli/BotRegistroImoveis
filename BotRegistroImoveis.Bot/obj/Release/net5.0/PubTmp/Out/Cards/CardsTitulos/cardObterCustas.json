@@ -3,6 +3,7 @@
   "body": [
     {
       "type": "TextBlock",
+      "text": "Consultar Custas",
       "wrap": true,
       "spacing": "None",
       "fontType": "Default",
@@ -11,12 +12,11 @@
       "color": "Accent",
       "separator": true,
       "size": "Medium",
-      "isSubtle": true,
-      "text": "Busca tridimensional (Matrícula)"
+      "isSubtle": true
     },
     {
       "type": "TextBlock",
-      "text": "Utilize essa opção para consultar diversas informações relacionadas a uma matrícula.",
+      "text": "Informe o protocolo e confira os últimos andamentos referentes ao seu título.",
       "spacing": "Medium",
       "wrap": true,
       "height": "stretch",
@@ -29,25 +29,25 @@
   "actions": [
     {
       "type": "Action.ShowCard",
-      "title": "Informar dados",
+      "title": "Utilizar",
       "card": {
         "type": "AdaptiveCard",
         "body": [
           {
-            "label": "Tipo livro: ",
+            "label": "Tipo consulta: ",
             "isSubtle": true,
             "style": "expanded",
-            "id": "TipoLivro",
+            "id": "Tipo",
             "type": "Input.ChoiceSet",
             "value": "1",
             "separator": true,
             "choices": [
               {
-                "title": "Matrícula",
+                "title": "Prenotação",
                 "value": "1"
               },
               {
-                "title": "Transcrição",
+                "title": "Certidão",
                 "value": "2"
               }
             ]
@@ -55,10 +55,10 @@
           {
             "type": "Input.Text",
             "id": "Numero",
-            "label": "Número: ",
+            "label": "Número",
             "isRequired": true,
-            "errorMessage": "Informe o número matrícula",
-            "placeholder": "Informe o número matrícula",
+            "errorMessage": "Informe o número corretamente",
+            "placeholder": "Digite o número",
             "separator": true
           }
         ],
