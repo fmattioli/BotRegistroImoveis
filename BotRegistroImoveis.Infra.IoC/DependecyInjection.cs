@@ -13,9 +13,10 @@ namespace BotRegistroImoveis.Infra.IoC
         public static IServiceCollection AdicionarInfraEstrutura(this IServiceCollection services)
         {
             //Add injeção de classes
-            services.AddTransient<IUtilitarioService, UtilitarioService>();
-            services.AddTransient<ICustasService, CustasService>();
-            services.AddTransient<ICustasRepositorio, CustasRepositorio>();
+            services.AddTransient<IConsultaServico, ConsultaServico>();
+            services.AddTransient<ITituloServico, TituloServico>();
+            services.AddTransient<ICertidaoServico, CertidaoServico>();
+            services.AddTransient<IMatriculaServico, MatriculaServico>();
 
 
             return services;

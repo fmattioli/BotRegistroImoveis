@@ -17,11 +17,11 @@ namespace BotRegistroImoveis.Bot.Dialogs
     public class ConsultaDialog : CancelAndHelpDialog
     {
         private readonly GerenciarCards _gerenciadorCards;
-        private readonly IUtilitarioService _utilitario;
-        public ConsultaDialog(GerenciarCards gerenciadorCards, TituloDialog tituloCertidaoDialog, CertidaoDialog certidaoDialog, MatriculaDialog matriculaDialog, IUtilitarioService utilitario)
+        private readonly IConsultaServico _consultaServico;
+        public ConsultaDialog(GerenciarCards gerenciadorCards, TituloDialog tituloCertidaoDialog, CertidaoDialog certidaoDialog, MatriculaDialog matriculaDialog, IConsultaServico utilitario)
             : base(nameof(ConsultaDialog))
         {
-            _utilitario = utilitario;
+            _consultaServico = utilitario;
             _gerenciadorCards = gerenciadorCards;
             AddDialog(tituloCertidaoDialog);
             AddDialog(certidaoDialog);
@@ -55,18 +55,17 @@ namespace BotRegistroImoveis.Bot.Dialogs
         {
             string respostaCard = stepContext.Result?.ToString();
             var msgErro = "Infelizmente não consegui entender o que você disse \U0001F629 selecione abaixo opção que você deseja utilizar, combinado? \U0001F609";
-            if (await _utilitario.JsonValido(respostaCard))
+            var consultaViewModel = _consultaServico.DesserializarClasse(respostaCard);
+            if (consultaViewModel is not null)
             {
-                ConsultaViewModel consulta = JsonConvert.DeserializeObject<ConsultaViewModel>(respostaCard);
-                consulta.OpcaoSelecionada = RetornarOpcaoBaseadaNoCardEscolhido(consulta);
-                switch (consulta.OpcaoSelecionada)
+                switch (consultaViewModel.OpcaoSelecionada)
                 {
                     case "Titulo":
-                        return await stepContext.BeginDialogAsync(nameof(TituloDialog), consulta, cancellationToken);
+                        return await stepContext.BeginDialogAsync(nameof(TituloDialog), consultaViewModel, cancellationToken);
                     case "Certidao":
-                        return await stepContext.BeginDialogAsync(nameof(CertidaoDialog), consulta, cancellationToken);
+                        return await stepContext.BeginDialogAsync(nameof(CertidaoDialog), consultaViewModel, cancellationToken);
                     case "Matricula":
-                        return await stepContext.BeginDialogAsync(nameof(MatriculaDialog), consulta, cancellationToken);
+                        return await stepContext.BeginDialogAsync(nameof(MatriculaDialog), consultaViewModel, cancellationToken);
                     default:
                         return await stepContext.ReplaceDialogAsync(InitialDialogId, msgErro, cancellationToken);
                 }
@@ -74,20 +73,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
             return await stepContext.ReplaceDialogAsync(InitialDialogId, msgErro, cancellationToken);
         }
 
-        private string RetornarOpcaoBaseadaNoCardEscolhido(ConsultaViewModel consulta)
-        {
-            if (!string.IsNullOrEmpty(consulta.TipoPrenotacao))
-                return "Titulo";
-
-            if (!string.IsNullOrEmpty(consulta.BuscarNumeroPedidoDeCertidao))
-                return "Certidao";
-
-            if (!string.IsNullOrEmpty(consulta.TipoLivro))
-                return "Matricula";
-
-            return "";
-
-        }
+       
     }
 }
 

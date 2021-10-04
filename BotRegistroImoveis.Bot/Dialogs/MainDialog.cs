@@ -16,7 +16,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
     {
         protected readonly ILogger Logger;
         // Dependency injection uses this constructor to instantiate MainDialog
-        public MainDialog(ILogger<MainDialog> logger, ConsultaDialog consultaDialog, IUtilitarioService consultaServico)
+        public MainDialog(ILogger<MainDialog> logger, ConsultaDialog consultaDialog)
             : base(nameof(MainDialog))
         {
             Logger = logger;

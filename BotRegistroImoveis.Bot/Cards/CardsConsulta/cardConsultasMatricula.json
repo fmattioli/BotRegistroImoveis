@@ -16,7 +16,7 @@
     },
     {
       "type": "TextBlock",
-      "text": "Utilize essa opção para ter acesso a diversos modelos de consultas referentes a informações de um livro.",
+      "text": "Utilize essa opção para ter acesso a diversos modelos de consultas referentes a informações de qualquer tipo de livro.",
       "spacing": "Medium",
       "wrap": true,
       "height": "stretch",
@@ -39,7 +39,7 @@
             "style": "expanded",
             "id": "TipoLivro",
             "type": "Input.ChoiceSet",
-            "value": "1",
+            "value": "Matrícula",
             "separator": true,
             "choices": [
               {

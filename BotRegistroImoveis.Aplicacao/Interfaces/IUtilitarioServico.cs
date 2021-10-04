@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BotRegistroImoveis.Aplicacao.Interfaces
 {
-    public interface IUtilitarioService
+    public interface IUtilitarioServico<out T>
     {
-        Task<bool> JsonValido(string Json);
+        T DesserializarClasse(string Json);
     }
 }

@@ -76,13 +76,9 @@ C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Re
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\BotRegistroImoveis.Infra.IoC.pdb
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\BotRegistroImoveis.Dominio.pdb
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\BotRegistroImoveis.Infra.Data.pdb
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsConsulta\cardConsultarCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsConsulta\cardConsultarParticipantes.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsConsulta\cardConsultarTitulo.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsConsulta\cardConsultasMatricula.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsCustas\cardObterCustas.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsCustas\cardResumoCustas.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsMatricula\cardOpcoesMatricula.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsParticipantes\cardObterParticipantes.json
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\appsettings.Development.json
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsConsulta\cardConsultarParticipantes.json
@@ -170,3 +166,6 @@ C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\ref\BotRegistroImoveis.Bot.dll
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\BotRegistroImoveis.Bot.pdb
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\BotRegistroImoveis.Bot.genruntimeconfig.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardConsultarCustasProtocolo.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardObterCustas.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardResumoCustas.json

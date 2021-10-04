@@ -80,7 +80,6 @@ C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\De
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsConsulta\cardConsultarTitulo.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsConsulta\cardConsultasMatricula.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsParticipantes\cardObterParticipantes.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsMatricula\cardOpcoesMatricula.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsTitulos\cardObterCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsTitulos\cardResumoCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsTitulos\cardConsultarCustasProtocolo.json

@@ -2,14 +2,13 @@ C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Re
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\wwwroot\default.htm
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\appsettings.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsConsulta\cardConsultarCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsConsulta\cardConsultarParticipantes.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsConsulta\cardConsultarTitulo.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsConsulta\cardConsultasMatricula.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsCustas\cardObterCustas.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsCustas\cardResumoCustas.json
-C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsMatricula\cardOpcoesMatricula.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsParticipantes\cardObterParticipantes.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsTitulos\cardConsultarCustasProtocolo.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsTitulos\cardObterCustas.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\Cards\CardsTitulos\cardResumoCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\DeploymentTemplates\new-rg-parameters.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\DeploymentTemplates\preexisting-rg-parameters.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\PubTmp\Out\DeploymentTemplates\template-with-new-rg.json

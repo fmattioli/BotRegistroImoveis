@@ -1,22 +1,15 @@
 ﻿using BotRegistroImoveis.Aplicacao.Interfaces;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace BotRegistroImoveis.Aplicacao.Servicos
 {
-    public class UtilitarioService : IUtilitarioService
+    public class UtilitarioService<T> : IUtilitarioServico<T> where T : class
     {
-        public async Task<bool> JsonValido(string Json)
+        public T DesserializarClasse(string Json)
         {
-            bool jsonValido = false;
-
-            await Task.Run(() =>
-            {
-                Json = Json.Trim();
-                jsonValido = Json.StartsWith("{") && Json.EndsWith("}")
-                       || Json.StartsWith("[") && Json.EndsWith("]");
-            });
-
-            return jsonValido;
+            var x = JsonSerializer.Deserialize<T>(Json);
+            return x;
         }
     }
 }

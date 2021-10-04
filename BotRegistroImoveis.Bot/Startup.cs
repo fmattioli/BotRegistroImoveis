@@ -37,7 +37,6 @@ namespace BotRegistroImoveis.Bot
             services.AddSingleton<MainDialog>();
             services.AddSingleton<GerenciarCards>();
             services.AddSingleton<ConsultaDialog>();
-            services.AddSingleton<CustasDialog>();
             services.AddSingleton<TituloDialog>();
             services.AddSingleton<MatriculaDialog>();
             services.AddSingleton<CertidaoDialog>();

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace BotRegistroImoveis.Aplicacao.ViewModels
 {
-    public class ProtocoloViewModel
+    public class CertidaoViewModel
     {
-        public string Tipo { get; set; }
-        public string Numero { get; set; }
+        public string OpcaoSelecionada { get; set; }
     }
 }

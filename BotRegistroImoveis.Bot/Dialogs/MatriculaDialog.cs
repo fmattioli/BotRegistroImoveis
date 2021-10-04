@@ -16,12 +16,12 @@ namespace BotRegistroImoveis.Bot.Dialogs
     public class MatriculaDialog : CancelAndHelpDialog
     {
         private readonly GerenciarCards _gerenciadorCards;
-        private readonly IUtilitarioService _utilitario;
-        public MatriculaDialog(GerenciarCards gerenciadorCards, IUtilitarioService utilitario, ICustasService custasService)
+        private readonly IMatriculaServico _matriculaServico;
+        public MatriculaDialog(GerenciarCards gerenciadorCards, IMatriculaServico utilitario)
             : base(nameof(MatriculaDialog))
         {
             _gerenciadorCards = gerenciadorCards;
-            _utilitario = utilitario;
+            _matriculaServico = utilitario;
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 ExibirOpcoesConsultasMatricula,
@@ -51,10 +51,10 @@ namespace BotRegistroImoveis.Bot.Dialogs
         private async Task<DialogTurnResult> ProcessarOpcaoSelecionada(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             string respostaCard = stepContext.Result?.ToString();
-            if (await _utilitario.JsonValido(respostaCard))
+            var matriculaViewModel = _matriculaServico.DesserializarClasse(respostaCard);
+            if (matriculaViewModel is not null)
             {
                 var listaJsons = new List<string>();
-                MatriculaViewModel matriculaViewModel = JsonConvert.DeserializeObject<MatriculaViewModel>(respostaCard);
                 await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, $"Entendido! Aqui estão as opções de buscas para o tipo de livro {(matriculaViewModel.TipoLivro == "1" ? "Matrícula" : "Transcrição")}:  número: {matriculaViewModel.Numero}");
                 
                 //cardParticipantesMatricula

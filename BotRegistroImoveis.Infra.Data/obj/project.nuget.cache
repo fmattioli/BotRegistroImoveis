@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tAd2nX/NBhLsEjcZH7x6nFEzNtbi+BlQBulAInYlXiSwgsH3pRRh0CSh7RObRG9LS65tKyCB5dXSWLrGCYazaQ==",
+  "dgSpecHash": "/uvs5l3419eDhUeNuPn0tsDIA0dQ92IcVTTXI4FXBg+9eLL71BGqFraFFhAsQtGmdG77ViEbc9dSaGFZd9tOBg==",
   "success": true,
-  "projectFilePath": "C:\\BackEnd\\BotSPCM\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj",
+  "projectFilePath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Infra.Data\\BotRegistroImoveis.Infra.Data.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

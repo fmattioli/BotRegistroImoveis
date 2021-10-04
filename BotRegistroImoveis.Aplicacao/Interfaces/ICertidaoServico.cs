@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace BotRegistroImoveis.Aplicacao.Interfaces
 {
-    public interface ICustasService
+    public interface ICertidaoServico : IUtilitarioServico<CertidaoViewModel>
     {
-        Task<CustasProtocoloViewModel> ObterCustas(string TipoProtocolo, string Protocolo);
     }
 }

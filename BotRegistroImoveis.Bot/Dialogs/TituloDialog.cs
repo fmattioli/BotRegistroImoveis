@@ -16,13 +16,12 @@ namespace BotRegistroImoveis.Bot.Dialogs
     public class TituloDialog : CancelAndHelpDialog
     {
         private readonly GerenciarCards _gerenciadorCards;
-        private readonly IUtilitarioService _utilitario;
-        public TituloDialog(GerenciarCards gerenciadorCards, CustasDialog custasDialog, IUtilitarioService utilitario)
+        private readonly ITituloServico _tituloServico;
+        public TituloDialog(GerenciarCards gerenciadorCards, ITituloServico utilitario)
             : base(nameof(TituloDialog))
         {
-            _utilitario = utilitario;
+            _tituloServico = utilitario;
             _gerenciadorCards = gerenciadorCards;
-            AddDialog(custasDialog);
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 ExibirOpcoesConsultasTitulo,
@@ -61,13 +60,13 @@ namespace BotRegistroImoveis.Bot.Dialogs
         private async Task<DialogTurnResult> ProcessarOpcaoSelecionada(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             string respostaCard = stepContext.Result?.ToString();
-            if (await _utilitario.JsonValido(respostaCard))
+            var tituloViewModel = _tituloServico.DesserializarClasse(respostaCard);
+            if (tituloViewModel is not null)
             {
-                ConsultaViewModel consulta = JsonConvert.DeserializeObject<ConsultaViewModel>(respostaCard);
-                switch (consulta.OpcaoSelecionada)
+                switch (tituloViewModel.OpcaoSelecionada)
                 {
                     case "Custas":
-                        return await stepContext.BeginDialogAsync(nameof(CustasDialog), null, cancellationToken);
+                        return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), null, cancellationToken);
                     default:
                         break;
                 }
