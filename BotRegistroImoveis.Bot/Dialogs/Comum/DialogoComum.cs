@@ -19,7 +19,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
         {
             ITypingActivity replyActivity = Activity.CreateTypingActivity();
             await stepContext.Context.SendActivityAsync((Activity)replyActivity);
-            await Task.Delay(2000);
+            await Task.Delay(1500);
         }
 
         /// <summary>
@@ -30,9 +30,9 @@ namespace BotRegistroImoveis.Bot.Dialogs
         /// <param name="cancellationToken"></param>
         /// <param name="InitialDialogId"></param>
         /// <returns></returns>
-        public static async Task<DialogTurnResult> ExibirMensagemDevidoAMalUsoPorParteDoUsuario(WaterfallStepContext stepContext, string msg, CancellationToken cancellationToken, string InitialDialogId)
+        public static async Task<DialogTurnResult> RetornarAoFluxoPrincipalDevidoAErroDoUsuario(WaterfallStepContext stepContext, string msg, CancellationToken cancellationToken, string InitialDialogId)
         {
-            return await stepContext.ReplaceDialogAsync(InitialDialogId, msg, cancellationToken);
+            return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), null, cancellationToken);
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
         /// <param name="cancellationToken"></param>
         /// <param name="mensagem"></param>
         /// <returns></returns>
-        public static async Task CriarEEnviarMensagem(WaterfallStepContext stepContext, CancellationToken cancellationToken, string mensagem)
+        public static async Task EnviarMensagem(WaterfallStepContext stepContext, CancellationToken cancellationToken, string mensagem)
         {
             await DialogoComum.AcaoDigitando(stepContext);
             var response = MessageFactory.Text(mensagem);

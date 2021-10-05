@@ -43,6 +43,18 @@
           "lib/netstandard1.3/Antlr4.Runtime.Standard.dll": {}
         }
       },
+      "FluentValidator/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.JsonPatch/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -2324,7 +2336,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "BotRegistroImoveis.Dominio": "1.0.0"
+          "BotRegistroImoveis.Dominio": "1.0.0",
+          "FluentValidator": "2.0.4"
         },
         "compile": {
           "bin/placeholder/BotRegistroImoveis.Aplicacao.dll": {}
@@ -2416,6 +2429,18 @@
         "lib/net35/Antlr4.Runtime.Standard.xml",
         "lib/netstandard1.3/Antlr4.Runtime.Standard.dll",
         "lib/netstandard1.3/Antlr4.Runtime.Standard.xml"
+      ]
+    },
+    "FluentValidator/2.0.4": {
+      "sha512": "px1HWHYBD20PuCUgz/mEl/QcBsikW5nbdtR5whllwMIyJ4FJs03nGXe5ocHEre/x3CX72hJBnX7bteqkZwlcfA==",
+      "type": "package",
+      "path": "fluentvalidator/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidator.2.0.4.nupkg.sha512",
+        "fluentvalidator.nuspec",
+        "lib/netstandard1.3/FluentValidator.dll"
       ]
     },
     "Microsoft.AspNetCore.JsonPatch/3.1.1": {

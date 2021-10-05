@@ -8,8 +8,9 @@ namespace BotRegistroImoveis.Aplicacao.Servicos
     {
         public T DesserializarClasse(string Json)
         {
-            var x = JsonSerializer.Deserialize<T>(Json);
-            return x;
+            return JsonSerializer.Deserialize<T>(Json);
         }
+
+        
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FluentValidator;
+using FluentValidator.Validation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +8,18 @@ using System.Threading.Tasks;
 
 namespace BotRegistroImoveis.Aplicacao.ViewModels
 {
-    public class TituloViewModel
+    public class TituloViewModel 
     {
-        public string OpcaoSelecionada { get; set; }
-        public string Tipo { get; set; }
-        public string Numero { get; set; }
+        public string Opcao { get; set; }
+        public string TipoPrenotacao { get; set; }
+        public string Protocolo { get; set; }
+
+        public bool EscolhaInvalida
+        {
+            get
+            {
+                return string.IsNullOrEmpty(Opcao);
+            }
+        }
     }
 }

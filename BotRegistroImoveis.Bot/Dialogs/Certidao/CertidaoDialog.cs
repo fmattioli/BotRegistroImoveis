@@ -32,7 +32,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
         {
             var listaJsons = new List<string>();
             var consulta = (ConsultaViewModel)stepContext.Options;
-            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, $"Entendido! abaixo você encontra as consultas disponíveis para a certidão: {consulta.PedidoCertidao}! \U0001F609");
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, $"Entendido! abaixo você encontra as consultas disponíveis para a certidão: {consulta.PedidoCertidao}! \U0001F609");
 
             //cardConsultarSelosTitulos
             var templateJson = _gerenciadorCards.RetornarConteudoJson("cardConsultarSelosCertidao");
@@ -62,7 +62,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
             }
 
             var msg = "Infelizmente não consegui entender o que você disse \U0001F629. Vamos começar novamente, selecione abaixo opção que você deseja utilizar, combinado? \U0001F609";
-            return await DialogoComum.ExibirMensagemDevidoAMalUsoPorParteDoUsuario(stepContext, msg, cancellationToken, InitialDialogId);
+            return await DialogoComum.RetornarAoFluxoPrincipalDevidoAErroDoUsuario(stepContext, msg, cancellationToken, InitialDialogId);
 
         }
 

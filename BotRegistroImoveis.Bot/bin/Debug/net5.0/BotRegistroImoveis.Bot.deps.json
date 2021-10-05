@@ -378,6 +378,20 @@
           "lib/netstandard1.3/Antlr4.Runtime.Standard.dll": {}
         }
       },
+      "FluentValidator/2.0.4": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {
+            "assemblyVersion": "2.0.4.0",
+            "fileVersion": "2.0.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.JsonPatch/3.1.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -1901,7 +1915,8 @@
       },
       "BotRegistroImoveis.Aplicacao/1.0.0": {
         "dependencies": {
-          "BotRegistroImoveis.Dominio": "1.0.0"
+          "BotRegistroImoveis.Dominio": "1.0.0",
+          "FluentValidator": "2.0.4"
         },
         "runtime": {
           "BotRegistroImoveis.Aplicacao.dll": {}
@@ -3670,6 +3685,13 @@
       "sha512": "sha512-90b8XFYaDKZkjEFae/GaazqXQTfINtZI1in+nCXGQGeGaajvCy1Ii2Va99H5ehULJRtDzNvFki4eXhwm3ymtag==",
       "path": "antlr4.runtime.standard/4.8.0",
       "hashPath": "antlr4.runtime.standard.4.8.0.nupkg.sha512"
+    },
+    "FluentValidator/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-px1HWHYBD20PuCUgz/mEl/QcBsikW5nbdtR5whllwMIyJ4FJs03nGXe5ocHEre/x3CX72hJBnX7bteqkZwlcfA==",
+      "path": "fluentvalidator/2.0.4",
+      "hashPath": "fluentvalidator.2.0.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/3.1.1": {
       "type": "package",

@@ -10,5 +10,6 @@ namespace BotRegistroImoveis.Aplicacao.Servicos
 {
     public class TituloServico : UtilitarioService<TituloViewModel>, ITituloServico
     {
+       
     }
 }

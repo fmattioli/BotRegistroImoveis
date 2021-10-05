@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BotRegistroImoveis.Aplicacao.ViewModels
 {
-    public class ConsultaViewModel
+    public class ConsultaViewModel 
     {
         public string Protocolo { get; set; }
         public string TipoPrenotacao { get; set; }

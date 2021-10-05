@@ -169,3 +169,4 @@ C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Release\net5.0\
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardConsultarCustasProtocolo.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardObterCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardResumoCustas.json
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\FluentValidator.dll

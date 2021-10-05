@@ -36,7 +36,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
         {
             var listaJsons = new List<string>();
             var consulta = (ConsultaViewModel)stepContext.Options;
-            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, $"Entendido! abaixo você encontra as consultas disponíveis para ${consulta.TipoLivro}-{consulta.NumeroLivro}! \U0001F609");
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, $"Entendido! abaixo você encontra as consultas disponíveis para ${consulta.TipoLivro}-{consulta.NumeroLivro}! \U0001F609");
 
             var templateJson = _gerenciadorCards.RetornarConteudoJson("cardUltimasCertidoes");
             listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(consulta, templateJson));
@@ -55,7 +55,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
             if (matriculaViewModel is not null)
             {
                 var listaJsons = new List<string>();
-                await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, $"Entendido! Aqui estão as opções de buscas para o tipo de livro {(matriculaViewModel.TipoLivro == "1" ? "Matrícula" : "Transcrição")}:  número: {matriculaViewModel.Numero}");
+                await DialogoComum.EnviarMensagem(stepContext, cancellationToken, $"Entendido! Aqui estão as opções de buscas para o tipo de livro {(matriculaViewModel.TipoLivro == "1" ? "Matrícula" : "Transcrição")}:  número: {matriculaViewModel.Numero}");
                 
                 //cardParticipantesMatricula
                 var templateJson = _gerenciadorCards.RetornarConteudoJson("cardParticipantesMatricula");
@@ -69,7 +69,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
             }
 
             var msg = "Infelizmente não consegui entender o que você disse \U0001F629 você selecionou por último que desejava consultar as custas de um determinado protocolo, então vamos seguir... \U0001F609";
-            return await DialogoComum.ExibirMensagemDevidoAMalUsoPorParteDoUsuario(stepContext, msg, cancellationToken, InitialDialogId);
+            return await DialogoComum.RetornarAoFluxoPrincipalDevidoAErroDoUsuario(stepContext, msg, cancellationToken, InitialDialogId);
         }
 
     }

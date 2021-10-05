@@ -2,6 +2,7 @@
 using BotRegistroImoveis.Aplicacao.ViewModels;
 using BotRegistroImoveis.Bot.Cards;
 using BotRegistroImoveis.Bot.Cards.Gerenciador;
+using BotRegistroImoveis.Bot.Dialogs.Titulo;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
@@ -37,7 +38,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
         }
         private async Task<DialogTurnResult> ExibirOpcoesConsultas(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            await DialogoComum.CriarEEnviarMensagem(stepContext, cancellationToken, "Escolha abaixo qual opção você deseja utilizar! \U0001F609");
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Escolha abaixo qual opção você deseja utilizar! \U0001F609");
             var welcomeCard = _gerenciadorCards.RetornarAdaptiveCard
             (
                 new List<string>()

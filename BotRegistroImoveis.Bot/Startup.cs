@@ -4,6 +4,7 @@ using BotRegistroImoveis.Bot.Bots;
 using BotRegistroImoveis.Bot.Cards;
 using BotRegistroImoveis.Bot.Cards.Gerenciador;
 using BotRegistroImoveis.Bot.Dialogs;
+using BotRegistroImoveis.Bot.Dialogs.Titulo;
 using BotRegistroImoveis.Infra.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -40,6 +41,7 @@ namespace BotRegistroImoveis.Bot
             services.AddSingleton<TituloDialog>();
             services.AddSingleton<MatriculaDialog>();
             services.AddSingleton<CertidaoDialog>();
+            services.AddSingleton<ContraditorioDialog>();
 
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
             services.AddTransient<IBot, DialogAndWelcomeBot<MainDialog>>();

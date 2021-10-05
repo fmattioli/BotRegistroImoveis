@@ -9,5 +9,6 @@ namespace BotRegistroImoveis.Aplicacao.Interfaces
     public interface IUtilitarioServico<out T>
     {
         T DesserializarClasse(string Json);
+        
     }
 }

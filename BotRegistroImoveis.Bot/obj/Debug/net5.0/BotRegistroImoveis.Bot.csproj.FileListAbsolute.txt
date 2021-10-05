@@ -168,3 +168,4 @@ C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Debug\net5.0\Bo
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Debug\net5.0\ref\BotRegistroImoveis.Bot.dll
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Debug\net5.0\BotRegistroImoveis.Bot.pdb
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Debug\net5.0\BotRegistroImoveis.Bot.genruntimeconfig.cache
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\FluentValidator.dll

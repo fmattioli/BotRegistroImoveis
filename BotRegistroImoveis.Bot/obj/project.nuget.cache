@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "A5fB1dXMSnMAuzUHPbvlv5M1n6BwW5EsYeTBS0DCA0IHZu0qtNCfM8z2PdX6yUu7d+G6Oh1GsH/Yi1liQkey/Q==",
+  "dgSpecHash": "1453J/L3BW/J7ftgttWwnvwjbGIpUVt51EAtk6+Gy8Vt3FsV4dqrzoJsT7NkX+ZrMuT/qyCh5HPX+9oOlNvYlQ==",
   "success": true,
   "projectFilePath": "C:\\EquipeWeb\\BotRegistroImoveis\\BotRegistroImoveis\\BotRegistroImoveis.Bot\\BotRegistroImoveis.Bot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felipe.santos\\.nuget\\packages\\adaptivecards.templating\\1.2.1\\adaptivecards.templating.1.2.1.nupkg.sha512",
     "C:\\Users\\felipe.santos\\.nuget\\packages\\adaptiveexpressions\\4.14.0\\adaptiveexpressions.4.14.0.nupkg.sha512",
     "C:\\Users\\felipe.santos\\.nuget\\packages\\antlr4.runtime.standard\\4.8.0\\antlr4.runtime.standard.4.8.0.nupkg.sha512",
+    "C:\\Users\\felipe.santos\\.nuget\\packages\\fluentvalidator\\2.0.4\\fluentvalidator.2.0.4.nupkg.sha512",
     "C:\\Users\\felipe.santos\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.1\\microsoft.aspnetcore.jsonpatch.3.1.1.nupkg.sha512",
     "C:\\Users\\felipe.santos\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.1\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.1.nupkg.sha512",
     "C:\\Users\\felipe.santos\\.nuget\\packages\\microsoft.azure.cognitiveservices.language.luis.runtime\\2.1.0\\microsoft.azure.cognitiveservices.language.luis.runtime.2.1.0.nupkg.sha512",
