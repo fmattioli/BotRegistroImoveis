@@ -169,3 +169,4 @@ C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Debug\net5.0\re
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Debug\net5.0\BotRegistroImoveis.Bot.pdb
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Bot\obj\Debug\net5.0\BotRegistroImoveis.Bot.genruntimeconfig.cache
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\FluentValidator.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Debug\net5.0\Cards\CardsTitulos\cardResumoContraditorio.json

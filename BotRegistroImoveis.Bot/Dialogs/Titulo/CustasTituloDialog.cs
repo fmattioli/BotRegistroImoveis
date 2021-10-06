@@ -10,13 +10,12 @@ using System.Threading.Tasks;
 
 namespace BotRegistroImoveis.Bot.Dialogs.Titulo
 {
-    public class ContraditorioDialog : CancelAndHelpDialog
+    public class CustasTituloDialog : CancelAndHelpDialog
     {
-
         private readonly GerenciarCards _gerenciadorCards;
         private readonly ITituloServico _tituloServico;
-        public ContraditorioDialog(GerenciarCards gerenciadorCards, ITituloServico utilitario)
-            : base(nameof(ContraditorioDialog))
+        public CustasTituloDialog(GerenciarCards gerenciadorCards, ITituloServico utilitario)
+            : base(nameof(CustasTituloDialog))
         {
             _tituloServico = utilitario;
             _gerenciadorCards = gerenciadorCards;
@@ -31,7 +30,6 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
             InitialDialogId = nameof(WaterfallDialog);
         }
 
-
         private async Task<DialogTurnResult> ExibirContraditorioTitulo(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
 
@@ -42,7 +40,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
             stepContext.Values.Add("TituloViewModel", tituloViewModel);
             var listaJsons = new List<string>();
             //cardResumoContraditorio
-            var templateJson = _gerenciadorCards.RetornarConteudoJson("cardResumoContraditorio");
+            var templateJson = _gerenciadorCards.RetornarConteudoJson("cardResumoCustas");
             listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(tituloViewModel, templateJson));
 
             return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
@@ -51,7 +49,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
 
         private async Task<DialogTurnResult> VoltarAoMenuPrincipalDeTitulos(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            var consultas = _tituloServico.DesserializarClasse(stepContext.Result.ToString());
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu de opções de consultas de títulos");
             var tituloViewModel = (TituloViewModel)stepContext.Values["TituloViewModel"];
             var consultaViewModel = new ConsultaViewModel
             {
@@ -59,19 +57,9 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
                 TipoPrenotacao = tituloViewModel.TipoPrenotacao
             };
 
-            switch (consultas.Opcao)
-            {
-                case "Anterior":
-                    await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu de opções de consultas de títulos");
-                    return await stepContext.BeginDialogAsync(nameof(TituloDialog), consultaViewModel, cancellationToken);
-                default:
-                    await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu principal");
-                    return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), consultaViewModel, cancellationToken);
-
-            }
+            return await stepContext.BeginDialogAsync(nameof(TituloDialog), consultaViewModel, cancellationToken);
 
         }
-
 
     }
 }

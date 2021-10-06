@@ -30,8 +30,8 @@ namespace BotRegistroImoveis.Bot.Bots
                 {
                     ITypingActivity replyActivity = Activity.CreateTypingActivity();
                     await turnContext.SendActivityAsync((Activity)replyActivity);
-                    await Task.Delay(2000);
-                    var response = MessageFactory.Text("Olá, seja bem vindo!!! Sou o assistente virtual do RI e estou pronto pra te ajudar! \U0001F601");
+                    await Task.Delay(1500);
+                    var response = MessageFactory.Text("Olá, seja bem vindo! Sou o assistente virtual do RI e estou pronto pra te ajudar! \U0001F601");
                     await turnContext.SendActivityAsync(response, cancellationToken);
                     await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>("DialogState"), cancellationToken);
                 }

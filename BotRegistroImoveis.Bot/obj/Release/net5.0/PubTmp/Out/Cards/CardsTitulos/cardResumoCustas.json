@@ -91,19 +91,19 @@
           "facts": [
             {
               "title": "Data recepção:",
-              "value": "**${data_recepcao}"
+              "value": "14/09/2021"
             },
             {
               "title": "Data expira:",
-              "value": "${data_expira}"
+              "value": "15/10/2021"
             },
             {
               "title": "Natureza:",
-              "value": "${natureza}"
+              "value": "Escritura Pública"
             },
             {
-              "title": "Matrícula:",
-              "value": "3445"
+              "title": "Data Cancelamento",
+              "value": "**-**"
             }
           ]
         }
@@ -225,65 +225,6 @@
               "width": "auto"
             }
           ]
-        },
-        {
-          "type": "Container",
-          "id": "cardContent${$index}",
-          "isVisible": false,
-          "items": [
-            {
-              "type": "Container",
-              "items": [
-                {
-                  "$data": "${custom_fields}",
-                  "type": "TextBlock",
-                  "text": "* ${value}",
-                  "isSubtle": true,
-                  "wrap": true
-                },
-                {
-                  "type": "Container",
-                  "items": [
-                    {
-                      "type": "Input.Text",
-                      "id": "comment${$index}",
-                      "placeholder": "Add your comment here."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "Container",
-              "items": [
-                {
-                  "type": "ColumnSet",
-                  "columns": [
-                    {
-                      "type": "Column",
-                      "items": [
-                        {
-                          "type": "ActionSet",
-                          "actions": [
-                            {
-                              "type": "Action.Submit",
-                              "title": "Send",
-                              "data": {
-                                "id": "_qkQW8dJlUeLVi7ZMEzYVw",
-                                "action": "comment",
-                                "lineItem": 1
-                              }
-                            }
-                          ]
-                        }
-                      ],
-                      "width": "auto"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -327,9 +268,9 @@
               "type": "Action.Submit",
               "style": "positive",
               "data": {
-                "opcao": "MenuPrincipal"
+                "Opcao": "Titulos"
               },
-              "title": "Voltar ao menu principal"
+              "title": "Voltar ao menu de títulos"
             }
           ]
         },
@@ -340,9 +281,9 @@
               "type": "Action.Submit",
               "style": "positive",
               "data": {
-                "opcao": "menuProtocolosCertidao"
+                "Opcao": "Principal"
               },
-              "title": "Voltar ao menu Protocolos/Certidão"
+              "title": "Voltar ao menu principal"
             }
           ]
         }

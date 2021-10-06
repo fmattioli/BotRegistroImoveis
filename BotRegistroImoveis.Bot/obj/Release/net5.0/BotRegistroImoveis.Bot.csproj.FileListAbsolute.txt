@@ -170,3 +170,4 @@ C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Re
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardObterCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardResumoCustas.json
 C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\FluentValidator.dll
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Bot\bin\Release\net5.0\Cards\CardsTitulos\cardResumoContraditorio.json

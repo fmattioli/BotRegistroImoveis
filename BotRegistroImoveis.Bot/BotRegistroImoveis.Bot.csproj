@@ -21,7 +21,8 @@
     <Content Remove="Cards\CardsMatricula\cardUltimosRegistros.json" />
     <Content Remove="Cards\CardsTitulos\cardConsultarContraditorio.json" />
     <Content Remove="Cards\CardsTitulos\cardConsultarSelosTitulos.json" />
-    <Content Remove="Cards\Contraditorio\cardResumoContraditorio.json" />
+    <Content Remove="Cards\CardsContraditorio\cardResumoContraditorio.json" />
+    <Content Remove="Cards\CardsTitulos\cardResumoSelosDigitaisTitulo.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,9 +38,10 @@
     <EmbeddedResource Include="Cards\CardsTitulos\cardConsultarCustasProtocolo.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardObterCustas.json" />
     <EmbeddedResource Include="Cards\CardsMatricula\cardUltimasCertidoes.json" />
+    <EmbeddedResource Include="Cards\CardsTitulos\cardResumoSelosDigitaisTitulo.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardResumoCustas.json" />
     <EmbeddedResource Include="Cards\CardsParticipantes\cardObterParticipantes.json" />
-    <EmbeddedResource Include="Cards\Contraditorio\cardResumoContraditorio.json" />
+    <EmbeddedResource Include="Cards\CardsTitulos\cardResumoContraditorio.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,6 +60,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Cards\CardsContraditorio\" />
     <Folder Include="CognitiveModels\" />
   </ItemGroup>
 

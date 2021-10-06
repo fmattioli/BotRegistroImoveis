@@ -18,12 +18,14 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
     {
         private readonly GerenciarCards _gerenciadorCards;
         private readonly ITituloServico _tituloServico;
-        public TituloDialog(GerenciarCards gerenciadorCards, ContraditorioDialog contraditorioDialog, ITituloServico utilitario)
+        public TituloDialog(GerenciarCards gerenciadorCards, ContraditorioDialog contraditorioDialog, ConsultarSelosDialog consultarSelos, CustasTituloDialog custasTituloDialog, ITituloServico utilitario)
             : base(nameof(TituloDialog))
         {
             _tituloServico = utilitario;
             _gerenciadorCards = gerenciadorCards;
             AddDialog(contraditorioDialog);
+            AddDialog(consultarSelos);
+            AddDialog(custasTituloDialog);
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 ExibirOpcoesConsultasTitulo,
@@ -42,7 +44,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
             if (consulta != null)
                 consulta = (ConsultaViewModel)stepContext.Options;
 
-            stepContext.Values["ConsultaViewModel"] = consulta;
+            stepContext.Values.Add("ConsultaViewModel", consulta);
             var listaJsons = new List<string>();
 
             //cardConsultarContraditorio
@@ -74,13 +76,17 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
                 {
                     case "Contraditorio":
                         return await stepContext.BeginDialogAsync(nameof(ContraditorioDialog), tituloViewModel, cancellationToken);
+                    case "ConsultarSeloTitulo":
+                        return await stepContext.BeginDialogAsync(nameof(ConsultarSelosDialog), tituloViewModel, cancellationToken);
+                    case "CustasTitulo":
+                        return await stepContext.BeginDialogAsync(nameof(CustasTituloDialog), tituloViewModel, cancellationToken);
                     default:
                         break;
                 }
             }
 
             await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Infelizmente não consegui entender o que você disse \U0001F629. Parece que você tentou voltar em um outro contexto da conversa. \U0001F609");
-            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Vamos começar novamente, selecione abaixo opção que você deseja utilizar, combinado? \U0001F609");
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Vou te redirecionar para o menu principal novamente...");
             return await DialogoComum.RetornarAoFluxoPrincipalDevidoAErroDoUsuario(stepContext, "", cancellationToken, InitialDialogId);
 
         }

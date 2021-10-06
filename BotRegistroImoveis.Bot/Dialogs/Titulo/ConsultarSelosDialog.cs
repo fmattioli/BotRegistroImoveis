@@ -10,19 +10,18 @@ using System.Threading.Tasks;
 
 namespace BotRegistroImoveis.Bot.Dialogs.Titulo
 {
-    public class ContraditorioDialog : CancelAndHelpDialog
+    public class ConsultarSelosDialog : CancelAndHelpDialog
     {
-
         private readonly GerenciarCards _gerenciadorCards;
         private readonly ITituloServico _tituloServico;
-        public ContraditorioDialog(GerenciarCards gerenciadorCards, ITituloServico utilitario)
-            : base(nameof(ContraditorioDialog))
+        public ConsultarSelosDialog(GerenciarCards gerenciadorCards, ITituloServico utilitario)
+            : base(nameof(ConsultarSelosDialog))
         {
             _tituloServico = utilitario;
             _gerenciadorCards = gerenciadorCards;
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
-                ExibirContraditorioTitulo,
+                ExibirSelosDoProtocolo,
                 VoltarAoMenuPrincipalDeTitulos
 
             }));
@@ -32,9 +31,8 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
         }
 
 
-        private async Task<DialogTurnResult> ExibirContraditorioTitulo(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        private async Task<DialogTurnResult> ExibirSelosDoProtocolo(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-
             var tituloViewModel = stepContext.Options as TituloViewModel;
             if (tituloViewModel != null)
                 tituloViewModel = (TituloViewModel)stepContext.Options;
@@ -42,7 +40,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
             stepContext.Values.Add("TituloViewModel", tituloViewModel);
             var listaJsons = new List<string>();
             //cardResumoContraditorio
-            var templateJson = _gerenciadorCards.RetornarConteudoJson("cardResumoContraditorio");
+            var templateJson = _gerenciadorCards.RetornarConteudoJson("cardResumoSelosDigitaisTitulo");
             listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(tituloViewModel, templateJson));
 
             return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
@@ -69,9 +67,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
                     return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), consultaViewModel, cancellationToken);
 
             }
-
         }
-
 
     }
 }

@@ -68,10 +68,24 @@
           "actions": [
             {
               "type": "Action.Submit",
-              "title": "Approve",
+              "title": "Voltar ao menu anterior",
               "style": "positive",
               "data": {
-                "Opcao": " ",
+                "Opcao": "Anterior ",
+                "action": "approve"
+              }
+            }
+          ]
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "Voltar ao menu princiapl",
+              "style": "positive",
+              "data": {
+                "Opcao": "Principal",
                 "action": "approve"
               }
             }
