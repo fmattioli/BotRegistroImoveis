@@ -2,6 +2,7 @@
 using BotRegistroImoveis.Aplicacao.Interfaces;
 using BotRegistroImoveis.Aplicacao.ViewModels;
 using BotRegistroImoveis.Bot.Cards.Gerenciador;
+using BotRegistroImoveis.Bot.Dialogs.Matricula;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Newtonsoft.Json;
@@ -17,11 +18,13 @@ namespace BotRegistroImoveis.Bot.Dialogs
     {
         private readonly GerenciarCards _gerenciadorCards;
         private readonly IMatriculaServico _matriculaServico;
-        public MatriculaDialog(GerenciarCards gerenciadorCards, IMatriculaServico utilitario)
+        public MatriculaDialog(GerenciarCards gerenciadorCards, UltimasCertidoesDialog ultimasCertidoesDialog, UltimosAtosDialog ultimosRegistrosDialog,  IMatriculaServico utilitario)
             : base(nameof(MatriculaDialog))
         {
             _gerenciadorCards = gerenciadorCards;
             _matriculaServico = utilitario;
+            AddDialog(ultimasCertidoesDialog);
+            AddDialog(ultimosRegistrosDialog);
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 ExibirOpcoesConsultasMatricula,
@@ -38,6 +41,8 @@ namespace BotRegistroImoveis.Bot.Dialogs
             var consulta = (ConsultaViewModel)stepContext.Options;
             await DialogoComum.EnviarMensagem(stepContext, cancellationToken, $"Entendido! abaixo você encontra as consultas disponíveis para ${consulta.TipoLivro}-{consulta.NumeroLivro}! \U0001F609");
 
+            stepContext.Values.Add("ConsultaViewModel", consulta);
+
             var templateJson = _gerenciadorCards.RetornarConteudoJson("cardUltimasCertidoes");
             listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(consulta, templateJson));
 
@@ -50,27 +55,32 @@ namespace BotRegistroImoveis.Bot.Dialogs
 
         private async Task<DialogTurnResult> ProcessarOpcaoSelecionada(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
+
+            var consulta = (ConsultaViewModel)stepContext.Values["ConsultaViewModel"];
             string respostaCard = stepContext.Result?.ToString();
             var matriculaViewModel = _matriculaServico.DesserializarClasse(respostaCard);
-            if (matriculaViewModel is not null)
-            {
-                var listaJsons = new List<string>();
-                await DialogoComum.EnviarMensagem(stepContext, cancellationToken, $"Entendido! Aqui estão as opções de buscas para o tipo de livro {(matriculaViewModel.TipoLivro == "1" ? "Matrícula" : "Transcrição")}:  número: {matriculaViewModel.Numero}");
-                
-                //cardParticipantesMatricula
-                var templateJson = _gerenciadorCards.RetornarConteudoJson("cardParticipantesMatricula");
-                listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
+            matriculaViewModel.NumeroLivro = consulta.NumeroLivro;
+            matriculaViewModel.TipoLivro = consulta.TipoLivro;
 
-                //cardUltimasCertidoes
-                templateJson = _gerenciadorCards.RetornarConteudoJson("cardUltimasCertidoes");
-                listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
-                
-                return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
+            if (!matriculaViewModel.EscolhaInvalida)
+            {
+                switch (matriculaViewModel.Opcao)
+                {
+                    case "UltimasCertidoes":
+                        return await stepContext.BeginDialogAsync(nameof(UltimasCertidoesDialog), matriculaViewModel, cancellationToken);
+                    default:
+                        return await stepContext.BeginDialogAsync(nameof(UltimosAtosDialog), matriculaViewModel, cancellationToken);
+                }
             }
 
-            var msg = "Infelizmente não consegui entender o que você disse \U0001F629 você selecionou por último que desejava consultar as custas de um determinado protocolo, então vamos seguir... \U0001F609";
-            return await DialogoComum.RetornarAoFluxoPrincipalDevidoAErroDoUsuario(stepContext, msg, cancellationToken, InitialDialogId);
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Infelizmente não consegui entender o que você disse \U0001F629. Parece que você tentou voltar em um outro contexto da conversa. \U0001F609");
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Vou te redirecionar para o menu principal novamente...");
+            return await DialogoComum.RetornarAoFluxoPrincipalDevidoAErroDoUsuario(stepContext, "", cancellationToken, InitialDialogId);
+
+
         }
+
+
 
     }
 }

@@ -9,8 +9,17 @@ namespace BotRegistroImoveis.Aplicacao.ViewModels
 {
     public class MatriculaViewModel
     {
+        public string Opcao { get; set; }
         public string TipoLivro { get; set; }
         public string TipoConsulta { get; set; }
-        public string Numero { get; set; }
+        public string NumeroLivro { get; set; }
+
+        public bool EscolhaInvalida
+        {
+            get
+            {
+                return string.IsNullOrEmpty(Opcao);
+            }
+        }
     }
 }

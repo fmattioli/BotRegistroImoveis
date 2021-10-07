@@ -19,6 +19,9 @@
     <Content Remove="Cards\CardsCertidao\cardResumoCustasCertidao.json" />
     <Content Remove="Cards\CardsCertidao\cardResumoSelosDigitaisCertidao.json" />
     <Content Remove="Cards\CardsConsulta\cardConsultarCertidao.json" />
+    <Content Remove="Cards\CardsMatricula\cardResultadoUltimasCertidoes1.json" />
+    <Content Remove="Cards\CardsMatricula\cardResultadoUltimasCertidoes2.json" />
+    <Content Remove="Cards\CardsMatricula\cardResultadoUltimasCertidoes3.json" />
     <Content Remove="Cards\CardsMatricula\cardUltimasCertidoes.json" />
     <Content Remove="Cards\CardsMatricula\cardUltimosRegistros.json" />
     <Content Remove="Cards\CardsTitulos\cardConsultarContraditorio.json" />
@@ -36,6 +39,9 @@
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultasMatricula.json" />
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarTitulo.json" />
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarParticipantes.json" />
+    <EmbeddedResource Include="Cards\CardsMatricula\cardResultadoUltimasCertidoes3.json" />
+    <EmbeddedResource Include="Cards\CardsMatricula\cardResultadoUltimasCertidoes2.json" />
+    <EmbeddedResource Include="Cards\CardsMatricula\cardResultadoUltimasCertidoes1.json" />
     <EmbeddedResource Include="Cards\CardsMatricula\cardUltimosRegistros.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardConsultarSelosTitulos.json" />
     <EmbeddedResource Include="Cards\CardsTitulos\cardConsultarContraditorio.json" />

@@ -49,7 +49,7 @@
                   "title": "Visualizar certidões",
                   "style": "positive",
                   "data": {
-                    "opcao": "UltimasCertidoes"
+                    "Opcao": "UltimasCertidoes"
                   }
                 }
               ]

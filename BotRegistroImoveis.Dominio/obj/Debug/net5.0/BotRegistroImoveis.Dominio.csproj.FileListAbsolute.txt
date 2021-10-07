@@ -21,3 +21,4 @@ C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Debug\net5.
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Debug\net5.0\BotRegistroImoveis.Dominio.dll
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Debug\net5.0\ref\BotRegistroImoveis.Dominio.dll
 C:\BackEnd\BotSPCM\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Debug\net5.0\BotRegistroImoveis.Dominio.pdb
+C:\EquipeWeb\BotRegistroImoveis\BotRegistroImoveis\BotRegistroImoveis.Dominio\obj\Debug\net5.0\BotRegistroImoveis.Dominio.csproj.AssemblyReference.cache

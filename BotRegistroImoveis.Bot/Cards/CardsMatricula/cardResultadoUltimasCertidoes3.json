@@ -1,0 +1,103 @@
+﻿{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "size": "Large",
+                  "weight": "Bolder",
+                  "text": "Últimas certidões solicitadas"
+                },
+                {
+                  "type": "TextBlock",
+                  "text": "${TipoLivro}-${NumeroLivro}",
+                  "wrap": true,
+                  "size": "Large",
+                  "weight": "Bolder"
+                }
+              ],
+              "width": "stretch"
+            }
+          ]
+        }
+      ],
+      "bleed": true
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "FactSet",
+          "spacing": "Large",
+          "facts": [
+            {
+              "title": "Solicitante:",
+              "value": "**JOÃO ALVES***"
+            },
+            {
+              "title": "Data pedido:",
+              "value": "29/07/2021"
+            },
+            {
+              "title": "Positiva?",
+              "value": "Sim"
+            },
+            {
+              "title": "Número pedido:",
+              "value": "975323"
+            },
+            {
+              "title": "Observação:",
+              "value": "**-**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "Menu anterior",
+              "style": "positive",
+              "data": {
+                "Opcao": "Anterior ",
+                "action": "approve"
+              }
+            }
+          ]
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.Submit",
+              "title": "Menu princiapl",
+              "style": "positive",
+              "data": {
+                "Opcao": "Principal",
+                "action": "approve"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3",
+  "fallbackText": "This card requires Adaptive Cards v1.2 support to be rendered properly."
+}
