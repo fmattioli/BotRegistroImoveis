@@ -1,4 +1,7 @@
 ﻿using AdaptiveCards.Templating;
+using BotRegistroImoveis.Aplicacao.Interfaces;
+using BotRegistroImoveis.Aplicacao.ViewModels;
+using BotRegistroImoveis.Bot.Dialogs.Titulo;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
@@ -15,6 +18,7 @@ namespace BotRegistroImoveis.Bot.Dialogs
     /// </summary>
     public static class DialogoComum
     {
+       
         public static async Task AcaoDigitando(WaterfallStepContext stepContext)
         {
             ITypingActivity replyActivity = Activity.CreateTypingActivity();

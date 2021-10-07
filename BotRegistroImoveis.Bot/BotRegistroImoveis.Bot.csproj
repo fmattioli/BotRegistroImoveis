@@ -16,6 +16,8 @@
     <Content Remove="Cards\cardResumoCustas.json" />
     <Content Remove="Cards\CardsCertidao\cardConsultarCustasCertidao.json" />
     <Content Remove="Cards\CardsCertidao\cardConsultarSelosCertidao.json" />
+    <Content Remove="Cards\CardsCertidao\cardResumoCustasCertidao.json" />
+    <Content Remove="Cards\CardsCertidao\cardResumoSelosDigitaisCertidao.json" />
     <Content Remove="Cards\CardsConsulta\cardConsultarCertidao.json" />
     <Content Remove="Cards\CardsMatricula\cardUltimasCertidoes.json" />
     <Content Remove="Cards\CardsMatricula\cardUltimosRegistros.json" />
@@ -27,6 +29,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Cards\CardsCertidao\cardConsultarCustasCertidao.json" />
+    <EmbeddedResource Include="Cards\CardsCertidao\cardResumoCustasCertidao.json" />
+    <EmbeddedResource Include="Cards\CardsCertidao\cardResumoSelosDigitaisCertidao.json" />
     <EmbeddedResource Include="Cards\CardsCertidao\cardConsultarSelosCertidao.json" />
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultarCertidao.json" />
     <EmbeddedResource Include="Cards\CardsConsulta\cardConsultasMatricula.json" />

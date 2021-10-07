@@ -48,7 +48,7 @@
                   "title": "Visualizar selos digitais",
                   "style": "positive",
                   "data": {
-                    "opcao": "ConsultarSeloTitulos"
+                    "Opcao": "ConsultarSeloCertidao"
                   }
                 }
               ]

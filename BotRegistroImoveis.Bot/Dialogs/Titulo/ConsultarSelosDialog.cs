@@ -57,7 +57,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
                 TipoPrenotacao = tituloViewModel.TipoPrenotacao
             };
 
-            switch (consultas.Opcao)
+            switch (consultas.Opcao.Trim())
             {
                 case "Anterior":
                     await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu de opções de consultas de títulos");

@@ -3,50 +3,13 @@
   "body": [
     {
       "type": "Container",
-      "style": "emphasis",
-      "items": [
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "size": "Large",
-                  "weight": "Bolder",
-                  "text": "**EXPENSE APPROVAL**",
-                  "wrap": true
-                }
-              ],
-              "width": "stretch"
-            },
-            {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "Image",
-                  "url": "${status_url}",
-                  "altText": "${status}",
-                  "height": "30px"
-                }
-              ],
-              "width": "auto"
-            }
-          ]
-        }
-      ],
-      "bleed": true
-    },
-    {
-      "type": "Container",
       "items": [
         {
           "type": "Container",
           "items": [
             {
               "type": "TextBlock",
-              "text": "Número do protocolo:",
+              "text": "Número do pedido de certidão:",
               "wrap": true,
               "size": "ExtraLarge"
             }
@@ -61,27 +24,11 @@
                 {
                   "type": "TextBlock",
                   "size": "ExtraLarge",
-                  "text": "${protocolo}",
+                  "text": "${pedidocertidao}",
                   "wrap": true
                 }
               ],
               "width": "stretch"
-            },
-            {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "ActionSet",
-                  "actions": [
-                    {
-                      "type": "Action.OpenUrl",
-                      "title": "EXPORT AS PDF",
-                      "url": "https://adaptivecards.io"
-                    }
-                  ]
-                }
-              ],
-              "width": "auto"
             }
           ]
         },
@@ -90,20 +37,20 @@
           "spacing": "Large",
           "facts": [
             {
-              "title": "Data recepção:",
-              "value": "14/09/2021"
+              "title": "Data pedido:",
+              "value": "18/09/2021"
             },
             {
               "title": "Data expira:",
               "value": "15/10/2021"
             },
             {
-              "title": "Natureza:",
-              "value": "Escritura Pública"
+              "title": "Livro:",
+              "value": "Matrícula"
             },
             {
-              "title": "Data Cancelamento",
-              "value": "**-**"
+              "title": "Número:",
+              "value": "**1910**"
             }
           ]
         }
@@ -183,7 +130,7 @@
               "items": [
                 {
                   "type": "TextBlock",
-                  "text": "Averbação com valor declarado",
+                  "text": "Certidão",
                   "wrap": true
                 }
               ],
@@ -194,7 +141,7 @@
               "items": [
                 {
                   "type": "TextBlock",
-                  "text": "R$ 157,99",
+                  "text": "R$ 57,99",
                   "wrap": true
                 }
               ],
@@ -250,7 +197,7 @@
           "items": [
             {
               "type": "TextBlock",
-              "text": "R$ 157,99",
+              "text": "R$ 57,99",
               "wrap": true
             }
           ],
@@ -270,7 +217,7 @@
               "data": {
                 "Opcao": "Anterior"
               },
-              "title": "Voltar ao menu de títulos"
+              "title": "Voltar ao menu anterior"
             }
           ]
         },

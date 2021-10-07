@@ -268,7 +268,7 @@
               "type": "Action.Submit",
               "style": "positive",
               "data": {
-                "Opcao": "Titulos"
+                "Opcao": "Anterior"
               },
               "title": "Voltar ao menu de títulos"
             }

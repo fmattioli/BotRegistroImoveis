@@ -8,6 +8,16 @@ namespace BotRegistroImoveis.Aplicacao.ViewModels
 {
     public class CertidaoViewModel
     {
-        public string OpcaoSelecionada { get; set; }
+        public string Opcao { get; set; }
+        public string TipoCertidao { get; set; }
+        public string PedidoCertidao { get; set; }
+
+        public bool EscolhaInvalida
+        {
+            get
+            {
+                return string.IsNullOrEmpty(Opcao);
+            }
+        }
     }
 }

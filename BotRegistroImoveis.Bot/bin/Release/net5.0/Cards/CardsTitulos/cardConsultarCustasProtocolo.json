@@ -48,7 +48,7 @@
                   "title": "Visualizar custas",
                   "style": "positive",
                   "data": {
-                    "opcao": "Custas"
+                    "Opcao": "CustasTitulo"
                   }
                 }
               ]

@@ -15,7 +15,7 @@
                   "type": "TextBlock",
                   "size": "Large",
                   "weight": "Bolder",
-                  "text": "**Contraditório protocolo: ${protocolo}**"
+                  "text": "**Selos digitais do pedido: ${pedidocertidao}**"
                 }
               ],
               "width": "stretch"
@@ -30,33 +30,22 @@
       "items": [
         {
           "type": "FactSet",
-          "spacing": "Large",
           "facts": [
             {
-              "title": "Apresentante:",
-              "value": "**CARLOS JOSÉ APARECIDO**"
+              "title": "Selo Certidão MAT 1985",
+              "value": "12056837C3MN100136507BO21F"
             },
             {
-              "title": "Data Recepção:",
-              "value": "24/03/2021"
+              "title": "Selo Certidão MAT 1044",
+              "value": "1205768345NU000136506BE221O"
             },
             {
-              "title": "Data Expira:",
-              "value": "25/05/2021"
-            },
-            {
-              "title": "Data Cancelamento:",
-              "value": "Sem Cancelamento"
-            },
-            {
-              "title": "Observação:",
-              "value": "**Validar custas**"
-            },
-            {
-              "title": "Total de custas:",
-              "value": "**R$ 579,00**"
+              "title": "Selo Certidão MAT 19910",
+              "value": "120569994C3DX000136495LM21G"
             }
-          ]
+          ],
+          "spacing": "None",
+          "height": "stretch"
         }
       ]
     },
@@ -71,23 +60,20 @@
               "title": "Menu anterior",
               "style": "positive",
               "data": {
-                "Opcao": "Anterior ",
+                "Opcao": "Anterior",
                 "action": "approve"
-              }
-            }
-          ]
-        },
-        {
-          "type": "ActionSet",
-          "actions": [
+              },
+              "associatedInputs": "none"
+            },
             {
               "type": "Action.Submit",
-              "title": "Menu princiapl",
+              "title": "Menu principal",
               "style": "positive",
               "data": {
                 "Opcao": "Principal",
                 "action": "approve"
-              }
+              },
+              "associatedInputs": "none"
             }
           ]
         }

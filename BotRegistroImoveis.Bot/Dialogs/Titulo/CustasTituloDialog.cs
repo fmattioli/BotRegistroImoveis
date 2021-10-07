@@ -49,7 +49,13 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
 
         private async Task<DialogTurnResult> VoltarAoMenuPrincipalDeTitulos(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
-            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu de opções de consultas de títulos");
+            return await RetornarParaMenuAnteriorOpcaoTitulo(stepContext, cancellationToken);
+
+        }
+
+        private async Task<DialogTurnResult> RetornarParaMenuAnteriorOpcaoTitulo(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            var consultas = _tituloServico.DesserializarClasse(stepContext.Result.ToString());
             var tituloViewModel = (TituloViewModel)stepContext.Values["TituloViewModel"];
             var consultaViewModel = new ConsultaViewModel
             {
@@ -57,9 +63,16 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
                 TipoPrenotacao = tituloViewModel.TipoPrenotacao
             };
 
-            return await stepContext.BeginDialogAsync(nameof(TituloDialog), consultaViewModel, cancellationToken);
+            switch (consultas.Opcao.Trim())
+            {
+                case "Anterior":
+                    await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu de opções de consultas de títulos");
+                    return await stepContext.BeginDialogAsync(nameof(TituloDialog), consultaViewModel, cancellationToken);
+                default:
+                    await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu principal");
+                    return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), consultaViewModel, cancellationToken);
 
+            }
         }
-
     }
 }
