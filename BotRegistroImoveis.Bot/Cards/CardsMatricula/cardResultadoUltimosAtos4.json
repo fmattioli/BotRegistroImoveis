@@ -1,0 +1,63 @@
+﻿{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "spacing": "None",
+      "fontType": "Default",
+      "horizontalAlignment": "Center",
+      "height": "stretch",
+      "color": "Accent",
+      "separator": true,
+      "size": "Medium",
+      "isSubtle": true,
+      "text": "${TipoLivro}-${NumeroLivro}"
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Seq Ato:",
+          "value": "34"
+        },
+        {
+          "title": "Data registro:",
+          "value": "22/08/2021"
+        },
+        {
+          "title": "Protocolo:",
+          "value": "2087"
+        },
+        {
+          "title": "Négocio:",
+          "value": "Permuta"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.ShowCard",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "RichTextBlock",
+            "inlines": [
+              {
+                "type": "TextRun",
+                "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+              }
+            ]
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+      },
+      "style": "positive",
+      "title": "Visualizar texto"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3"
+}

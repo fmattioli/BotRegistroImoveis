@@ -58,7 +58,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Titulo
             templateJson = _gerenciadorCards.RetornarConteudoJson("cardConsultarCustasProtocolo");
             listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(consulta, templateJson));
 
-            return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
+            return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBindingMesclarDados(listaJsons), cancellationToken);
 
         }
 

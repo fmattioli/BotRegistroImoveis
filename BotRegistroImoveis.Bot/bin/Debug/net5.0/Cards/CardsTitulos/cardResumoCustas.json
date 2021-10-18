@@ -273,20 +273,8 @@
               "title": "Voltar ao menu de títulos"
             }
           ]
-        },
-        {
-          "type": "ActionSet",
-          "actions": [
-            {
-              "type": "Action.Submit",
-              "style": "positive",
-              "data": {
-                "Opcao": "Principal"
-              },
-              "title": "Voltar ao menu principal"
-            }
-          ]
         }
+        
       ]
     }
   ],

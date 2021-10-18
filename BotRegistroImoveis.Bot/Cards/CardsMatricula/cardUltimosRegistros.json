@@ -49,7 +49,7 @@
                   "title": "Visualizar registros anteriores",
                   "style": "positive",
                   "data": {
-                    "opcao": "RegistrosAnteriores"
+                    "Opcao": "RegistrosAnteriores"
                   }
                 }
               ]

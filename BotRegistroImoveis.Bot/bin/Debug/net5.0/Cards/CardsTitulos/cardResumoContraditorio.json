@@ -82,7 +82,7 @@
           "actions": [
             {
               "type": "Action.Submit",
-              "title": "Menu princiapl",
+              "title": "Menu principal",
               "style": "positive",
               "data": {
                 "Opcao": "Principal",

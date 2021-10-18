@@ -59,40 +59,8 @@
           ]
         }
       ]
-    },
-    {
-      "type": "Container",
-      "items": [
-        {
-          "type": "ActionSet",
-          "actions": [
-            {
-              "type": "Action.Submit",
-              "title": "Menu anterior",
-              "style": "positive",
-              "data": {
-                "Opcao": "Anterior ",
-                "action": "approve"
-              }
-            }
-          ]
-        },
-        {
-          "type": "ActionSet",
-          "actions": [
-            {
-              "type": "Action.Submit",
-              "title": "Menu princiapl",
-              "style": "positive",
-              "data": {
-                "Opcao": "Principal",
-                "action": "approve"
-              }
-            }
-          ]
-        }
-      ]
     }
+    
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.3",

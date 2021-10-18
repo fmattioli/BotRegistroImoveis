@@ -73,7 +73,7 @@ namespace BotRegistroImoveis.Bot.Cards.Gerenciador
             };
         }
 
-        public PromptOptions CriarAdaptiveCardBinding(string json)
+        public PromptOptions CriarAdaptiveCardBindingSemMesclagem(string json)
         {
             var lista = new List<Attachment>();
             lista.Add(CriarAttachmentFromJson(json));
@@ -90,7 +90,7 @@ namespace BotRegistroImoveis.Bot.Cards.Gerenciador
             return opts;
         }
 
-        public PromptOptions CriarListaAdaptiveCardBinding(IList<string> jsons)
+        public PromptOptions CriarListaAdaptiveCardBindingMesclarDados(IList<string> jsons)
         {
             var lista = new List<Attachment>();
             foreach (var json in jsons)
@@ -103,7 +103,7 @@ namespace BotRegistroImoveis.Bot.Cards.Gerenciador
                     AttachmentLayout = AttachmentLayoutTypes.Carousel,
                     Attachments = lista,
                     Type = ActivityTypes.Message,
-                },
+                }
             };
 
             return opts;

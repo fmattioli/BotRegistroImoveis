@@ -56,36 +56,6 @@
           "height": "stretch"
         }
       ]
-    },
-    {
-      "type": "Container",
-      "items": [
-        {
-          "type": "ActionSet",
-          "actions": [
-            {
-              "type": "Action.Submit",
-              "title": "Menu anterior",
-              "style": "positive",
-              "data": {
-                "Opcao": "Anterior",
-                "action": "approve"
-              },
-              "associatedInputs": "none"
-            },
-            {
-              "type": "Action.Submit",
-              "title": "Menu principal",
-              "style": "positive",
-              "data": {
-                "Opcao": "Principal",
-                "action": "approve"
-              },
-              "associatedInputs": "none"
-            }
-          ]
-        }
-      ]
     }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",

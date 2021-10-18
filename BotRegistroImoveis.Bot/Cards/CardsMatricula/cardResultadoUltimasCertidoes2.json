@@ -79,20 +79,6 @@
               }
             }
           ]
-        },
-        {
-          "type": "ActionSet",
-          "actions": [
-            {
-              "type": "Action.Submit",
-              "title": "Menu princiapl",
-              "style": "positive",
-              "data": {
-                "Opcao": "Principal",
-                "action": "approve"
-              }
-            }
-          ]
         }
       ]
     }

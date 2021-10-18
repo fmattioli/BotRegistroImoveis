@@ -5,6 +5,7 @@ using BotRegistroImoveis.Bot.Cards;
 using BotRegistroImoveis.Bot.Cards.Gerenciador;
 using BotRegistroImoveis.Bot.Dialogs;
 using BotRegistroImoveis.Bot.Dialogs.Certidao;
+using BotRegistroImoveis.Bot.Dialogs.Comum;
 using BotRegistroImoveis.Bot.Dialogs.Matricula;
 using BotRegistroImoveis.Bot.Dialogs.Titulo;
 using BotRegistroImoveis.Infra.IoC;
@@ -40,6 +41,7 @@ namespace BotRegistroImoveis.Bot
             services.AddSingleton<MainDialog>();
             services.AddSingleton<GerenciarCards>();
             services.AddSingleton<ConsultaDialog>();
+            services.AddSingleton<BotoesVoltarDialog>();
 
             services.AddSingleton<TituloDialog>();
             services.AddSingleton<ContraditorioDialog>();

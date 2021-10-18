@@ -3,43 +3,6 @@
   "body": [
     {
       "type": "Container",
-      "style": "emphasis",
-      "items": [
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "size": "Large",
-                  "weight": "Bolder",
-                  "text": "**EXPENSE APPROVAL**",
-                  "wrap": true
-                }
-              ],
-              "width": "stretch"
-            },
-            {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "Image",
-                  "url": "${status_url}",
-                  "altText": "${status}",
-                  "height": "30px"
-                }
-              ],
-              "width": "auto"
-            }
-          ]
-        }
-      ],
-      "bleed": true
-    },
-    {
-      "type": "Container",
       "items": [
         {
           "type": "Container",
@@ -255,37 +218,6 @@
             }
           ],
           "width": "auto"
-        }
-      ]
-    },
-    {
-      "type": "Container",
-      "items": [
-        {
-          "type": "ActionSet",
-          "actions": [
-            {
-              "type": "Action.Submit",
-              "style": "positive",
-              "data": {
-                "Opcao": "Anterior"
-              },
-              "title": "Voltar ao menu de títulos"
-            }
-          ]
-        },
-        {
-          "type": "ActionSet",
-          "actions": [
-            {
-              "type": "Action.Submit",
-              "style": "positive",
-              "data": {
-                "Opcao": "Principal"
-              },
-              "title": "Voltar ao menu principal"
-            }
-          ]
         }
       ]
     }

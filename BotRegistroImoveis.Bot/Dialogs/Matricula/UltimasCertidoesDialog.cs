@@ -22,6 +22,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Matricula
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 ExibirUltimasCertidoes,
+                ExibirOpcoesVoltar,
                 Retornar
             }));
 
@@ -33,41 +34,50 @@ namespace BotRegistroImoveis.Bot.Dialogs.Matricula
         {
             await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Entendido! Aqui está o histórico de pedidos para esta matrícula!");
 
-            var certidaoViewModel = stepContext.Options as MatriculaViewModel;
-            if (certidaoViewModel != null)
-                certidaoViewModel = (MatriculaViewModel)stepContext.Options;
+            var matriculaViewModel = stepContext.Options as MatriculaViewModel;
+            if (matriculaViewModel != null)
+                matriculaViewModel = (MatriculaViewModel)stepContext.Options;
 
-            stepContext.Values.Add("CertidaoViewModel", certidaoViewModel);
+            stepContext.Values.Add("MatriculaViewModel", matriculaViewModel);
 
             var listaJsons = new List<string>();
             //cardResumoContraditorio
             var templateJson = _gerenciadorCards.RetornarConteudoJson("cardResultadoUltimasCertidoes1");
-            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(certidaoViewModel, templateJson));
+            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
 
             templateJson = _gerenciadorCards.RetornarConteudoJson("cardResultadoUltimasCertidoes2");
-            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(certidaoViewModel, templateJson));
+            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
 
             templateJson = _gerenciadorCards.RetornarConteudoJson("cardResultadoUltimasCertidoes3");
-            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(certidaoViewModel, templateJson));
+            listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(matriculaViewModel, templateJson));
 
-            return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
+            await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBindingMesclarDados(listaJsons), cancellationToken);
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Caso já tenha finalizado, basta escolher a opção desejado abaixo:");
+            return await stepContext.ContinueDialogAsync(cancellationToken);
 
         }
+
+        private async Task<DialogTurnResult> ExibirOpcoesVoltar(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarAdaptiveCardBindingSemMesclagem(_gerenciadorCards.RetornarConteudoJson("cardOpcoesVoltar")), cancellationToken);
+        }
+
 
         private async Task<DialogTurnResult> Retornar(WaterfallStepContext stepContext, CancellationToken cancellationToken)
         {
             var consultas = _matriculaServico.DesserializarClasse(stepContext.Result.ToString());
-            var certidaoViewModel = (CertidaoViewModel)stepContext.Values["CertidaoViewModel"];
+            var matriculaViewModel = (MatriculaViewModel)stepContext.Values["MatriculaViewModel"];
             var consultaViewModel = new ConsultaViewModel
             {
-                PedidoCertidao = certidaoViewModel.PedidoCertidao
+                NumeroLivro = matriculaViewModel.NumeroLivro,
+                TipoLivro = matriculaViewModel.TipoLivro
             };
 
             switch (consultas.Opcao.Trim())
             {
                 case "Anterior":
                     await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu de opções de consultas de pedido certidão");
-                    return await stepContext.BeginDialogAsync(nameof(CertidaoDialog), consultaViewModel, cancellationToken);
+                    return await stepContext.BeginDialogAsync(nameof(MatriculaDialog), consultaViewModel, cancellationToken);
                 default:
                     await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Certo, vou te redirecionar para o menu principal");
                     return await stepContext.BeginDialogAsync(nameof(ConsultaDialog), consultaViewModel, cancellationToken);

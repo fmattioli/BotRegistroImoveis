@@ -22,6 +22,7 @@ namespace BotRegistroImoveis.Bot.Dialogs.Certidao
             AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
             {
                 ExibirSelosDoPedido,
+                ExibirOpcoesVoltar,
                 VoltarAoMenuPrincipalDePedidoCertidao
 
             }));
@@ -43,8 +44,15 @@ namespace BotRegistroImoveis.Bot.Dialogs.Certidao
             var templateJson = _gerenciadorCards.RetornarConteudoJson("cardResumoSelosDigitaisCertidao");
             listaJsons.Add(DialogoComum.MesclarDadosParaExibirNoCard(certidaoViewModel, templateJson));
 
-            return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBinding(listaJsons), cancellationToken);
+            await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarListaAdaptiveCardBindingMesclarDados(listaJsons), cancellationToken);
+            await DialogoComum.EnviarMensagem(stepContext, cancellationToken, "Caso já tenha finalizado, basta escolher a opção desejado abaixo:");
+            return await stepContext.ContinueDialogAsync(cancellationToken);
 
+        }
+
+        private async Task<DialogTurnResult> ExibirOpcoesVoltar(WaterfallStepContext stepContext, CancellationToken cancellationToken)
+        {
+            return await stepContext.PromptAsync(nameof(TextPrompt), _gerenciadorCards.CriarAdaptiveCardBindingSemMesclagem(_gerenciadorCards.RetornarConteudoJson("cardOpcoesVoltar")), cancellationToken);
         }
 
         private async Task<DialogTurnResult> VoltarAoMenuPrincipalDePedidoCertidao(WaterfallStepContext stepContext, CancellationToken cancellationToken)
